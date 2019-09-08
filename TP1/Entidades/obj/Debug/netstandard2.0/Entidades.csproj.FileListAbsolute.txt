@@ -1,0 +1,9 @@
+C:\Users\alan_\Desktop\Passucci.Alan.2A.TP1\Entidades\bin\Debug\netstandard2.0\Entidades.deps.json
+C:\Users\alan_\Desktop\Passucci.Alan.2A.TP1\Entidades\bin\Debug\netstandard2.0\Entidades.dll
+C:\Users\alan_\Desktop\Passucci.Alan.2A.TP1\Entidades\bin\Debug\netstandard2.0\Entidades.pdb
+C:\Users\alan_\Desktop\Passucci.Alan.2A.TP1\Entidades\obj\Debug\netstandard2.0\Entidades.csprojAssemblyReference.cache
+C:\Users\alan_\Desktop\Passucci.Alan.2A.TP1\Entidades\obj\Debug\netstandard2.0\Entidades.csproj.CoreCompileInputs.cache
+C:\Users\alan_\Desktop\Passucci.Alan.2A.TP1\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfoInputs.cache
+C:\Users\alan_\Desktop\Passucci.Alan.2A.TP1\Entidades\obj\Debug\netstandard2.0\Entidades.AssemblyInfo.cs
+C:\Users\alan_\Desktop\Passucci.Alan.2A.TP1\Entidades\obj\Debug\netstandard2.0\Entidades.dll
+C:\Users\alan_\Desktop\Passucci.Alan.2A.TP1\Entidades\obj\Debug\netstandard2.0\Entidades.pdb
