@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alan_\\Desktop\\Passucci.Alan.2A.TP1\\Entidades\\Entidades.csproj",
+      "projectUniqueName": "C:\\Users\\alan_\\Desktop\\tp_laboratorio_2\\TP1\\Entidades\\Entidades.csproj",
       "projectName": "Entidades",
-      "projectPath": "C:\\Users\\alan_\\Desktop\\Passucci.Alan.2A.TP1\\Entidades\\Entidades.csproj",
+      "projectPath": "C:\\Users\\alan_\\Desktop\\tp_laboratorio_2\\TP1\\Entidades\\Entidades.csproj",
       "packagesPath": "C:\\Users\\alan_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alan_\\Desktop\\Passucci.Alan.2A.TP1\\Entidades\\obj\\",
+      "outputPath": "C:\\Users\\alan_\\Desktop\\tp_laboratorio_2\\TP1\\Entidades\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

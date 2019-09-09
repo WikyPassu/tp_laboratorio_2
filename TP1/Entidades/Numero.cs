@@ -6,13 +6,15 @@ namespace Entidades
     {
         private double numero;
 
-        private double SetNumero
+        private string SetNumero
         {
             set
             {
-                if (ValidarNumero(value.ToString()) != 0)
+                double numeroValidado = ValidarNumero(value.ToString());
+
+                if (numeroValidado != 0)
                 {
-                    this.numero = value;
+                    this.numero = numeroValidado;
                 }
 
             }
@@ -20,17 +22,17 @@ namespace Entidades
 
         public Numero()
         {
-            this.SetNumero = 0;
+            this.SetNumero = 0.ToString();
         }
 
         public Numero(double numero)
         {
-            this.SetNumero = numero;
+            this.SetNumero = numero.ToString();
         }
 
         public Numero(string strNumero)
         {
-            this.SetNumero = double.Parse(strNumero);
+            this.SetNumero = strNumero;
         }
 
         private double ValidarNumero(string strNumero)
