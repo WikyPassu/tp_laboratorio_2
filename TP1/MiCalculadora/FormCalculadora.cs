@@ -30,9 +30,8 @@ namespace MiCalculadora
         {
             Numero numeroUno = new Numero(numero1);
             Numero numeroDos = new Numero(numero2);
-            double resultado = Calculadora.Operar(numeroUno, numeroDos, operador);
-
-            return resultado;
+            
+            return Calculadora.Operar(numeroUno, numeroDos, operador);
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -52,12 +51,13 @@ namespace MiCalculadora
 
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
-            double resultadoActual = Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text);
-            lblResultado.Text = Numero.DecimalBinario(resultadoActual);
+            //string resultadoActual = Convert.ToString(Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text));
+            lblResultado.Text = Numero.DecimalBinario(lblResultado.Text);
         }
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
+            //string resultadoActual = Convert.ToString(Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text));
             lblResultado.Text = Numero.BinarioDecimal(lblResultado.Text);
         }
     }

@@ -10,7 +10,7 @@ namespace Entidades
         {
             set
             {
-                double numeroValidado = ValidarNumero(value.ToString());
+                double numeroValidado = ValidarNumero(value);
 
                 if (numeroValidado != 0)
                 {
@@ -20,14 +20,11 @@ namespace Entidades
             }
         }
 
-        public Numero()
-        {
-            this.SetNumero = 0.ToString();
-        }
+        public Numero() : this(0) { }
 
         public Numero(double numero)
         {
-            this.SetNumero = numero.ToString();
+            this.SetNumero = Convert.ToString(numero);
         }
 
         public Numero(string strNumero)
@@ -61,7 +58,7 @@ namespace Entidades
 
             if (esBinario)
             {
-                retorno = Convert.ToInt32(binario, 2).ToString();
+                retorno = Convert.ToString(Convert.ToInt32(binario, 2));
             }
 
             return retorno;
@@ -69,23 +66,16 @@ namespace Entidades
 
         public static string DecimalBinario(double numero)
         {
-            string retorno = "Valor invalido";
-
-            if (numero >= 0)
-            {
-                retorno = Convert.ToString((int)numero, 2);
-            }
-
-            return retorno;
+            return Convert.ToString((int)Math.Abs(numero), 2);
         }
 
         public static string DecimalBinario(string numero)
         {
             string retorno = "Valor invalido";
 
-            if (double.Parse(numero) >= 0)
+            if (double.TryParse(numero, out double numeroParseado))
             {
-                retorno = Convert.ToString(int.Parse(numero), 2);
+                retorno = DecimalBinario(numeroParseado);
             }
 
             return retorno;
@@ -93,23 +83,17 @@ namespace Entidades
 
         public static double operator +(Numero n1, Numero n2)
         {
-            double resultado = n1.numero + n2.numero;
-
-            return resultado;
+            return n1.numero + n2.numero;
         }
 
         public static double operator -(Numero n1, Numero n2)
         {
-            double resultado = n1.numero - n2.numero;
-
-            return resultado;
+            return n1.numero - n2.numero;
         }
 
         public static double operator *(Numero n1, Numero n2)
         {
-            double resultado = n1.numero * n2.numero;
-
-            return resultado;
+            return n1.numero * n2.numero;
         }
 
         public static double operator /(Numero n1, Numero n2)
