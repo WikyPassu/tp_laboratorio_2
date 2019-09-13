@@ -26,7 +26,10 @@ namespace Entidades
         /// <summary>
         /// Constructor del objeto Numero que inicializa al atributo numero en 0.
         /// </summary>
-        public Numero() : this(0) { }
+        public Numero()
+        {
+            this.numero = 0;
+        }
         
         /// <summary>
         /// Sobrecarga del constructor Numero que setea mediante un setter al atributo numero recibiendo previamente dicho numero como double.

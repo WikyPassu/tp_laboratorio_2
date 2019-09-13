@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Entidades
 {
-    public class Calculadora
+    public static class Calculadora
     {
         /// <summary>
         /// Metodo que valida que el operador pasado como parametro es (+ - * /).
