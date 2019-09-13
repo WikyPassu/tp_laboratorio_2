@@ -16,14 +16,19 @@ namespace MiCalculadora
         public FormCalculadora()
         {
             InitializeComponent();
+            this.Text = "Calculadora de Alan Passucci del curso 2°A";
+            this.StartPosition = FormStartPosition.CenterScreen;
+            this.FormBorderStyle = FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
         }
-
+        
         private void Limpiar()
         {
-            lblResultado.Text = "";
-            txtNumero1.Clear();
-            txtNumero2.Clear();
-            cmbOperador.SelectedItem = null;
+            this.lblResultado.Text = "";
+            this.txtNumero1.Clear();
+            this.txtNumero2.Clear();
+            this.cmbOperador.SelectedItem = null;
         }
 
         private static double Operar(string numero1, string numero2, string operador)
@@ -41,24 +46,22 @@ namespace MiCalculadora
 
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
-            Limpiar();
+            this.Limpiar();
         }
 
         private void btnOperar_Click(object sender, EventArgs e)
         {
-            lblResultado.Text = Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text).ToString();
+            this.lblResultado.Text = Operar(this.txtNumero1.Text, this.txtNumero2.Text, this.cmbOperador.Text).ToString();
         }
 
         private void btnConvertirABinario_Click(object sender, EventArgs e)
         {
-            //string resultadoActual = Convert.ToString(Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text));
-            lblResultado.Text = Numero.DecimalBinario(lblResultado.Text);
+            this.lblResultado.Text = Numero.DecimalBinario(this.lblResultado.Text);
         }
 
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
-            //string resultadoActual = Convert.ToString(Operar(txtNumero1.Text, txtNumero2.Text, cmbOperador.Text));
-            lblResultado.Text = Numero.BinarioDecimal(lblResultado.Text);
+            this.lblResultado.Text = Numero.BinarioDecimal(this.lblResultado.Text);
         }
     }
 }
