@@ -58,7 +58,7 @@ namespace MiCalculadora
         {
             this.lblResultado.Text = Numero.DecimalBinario(this.lblResultado.Text);
         }
-
+        
         private void btnConvertirADecimal_Click(object sender, EventArgs e)
         {
             this.lblResultado.Text = Numero.BinarioDecimal(this.lblResultado.Text);

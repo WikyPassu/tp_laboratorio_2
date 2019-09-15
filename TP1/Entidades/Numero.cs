@@ -13,13 +13,7 @@ namespace Entidades
         {
             set
             {
-                double numeroValidado = ValidarNumero(value);
-
-                if (numeroValidado != 0)
-                {
-                    this.numero = numeroValidado;
-                }
-
+                this.numero = ValidarNumero(value);
             }
         }
 
