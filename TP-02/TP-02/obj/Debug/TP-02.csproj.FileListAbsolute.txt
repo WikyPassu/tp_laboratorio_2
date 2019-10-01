@@ -1,0 +1,28 @@
+D:\Federico\VB .Net\Visual C#\utn\TP-02\TP-02\bin\Debug\TP-02.exe.config
+D:\Federico\VB .Net\Visual C#\utn\TP-02\TP-02\bin\Debug\TP-02.exe
+D:\Federico\VB .Net\Visual C#\utn\TP-02\TP-02\bin\Debug\TP-02.pdb
+D:\Federico\VB .Net\Visual C#\utn\TP-02\TP-02\bin\Debug\Entidades.dll
+D:\Federico\VB .Net\Visual C#\utn\TP-02\TP-02\bin\Debug\Entidades.pdb
+D:\Federico\VB .Net\Visual C#\utn\TP-02\TP-02\obj\Debug\TP-02.csprojResolveAssemblyReference.cache
+D:\Federico\VB .Net\Visual C#\utn\TP-02\TP-02\obj\Debug\TP-02.exe
+D:\Federico\VB .Net\Visual C#\utn\TP-02\TP-02\obj\Debug\TP-02.pdb
+D:\VisualStudio\Federico Dávila\TP-02\TP-02\bin\Debug\TP-02.exe.config
+D:\VisualStudio\Federico Dávila\TP-02\TP-02\obj\Debug\TP-02.exe
+D:\VisualStudio\Federico Dávila\TP-02\TP-02\obj\Debug\TP-02.pdb
+D:\VisualStudio\Federico Dávila\TP-02\TP-02\obj\Debug\TP-02.csprojResolveAssemblyReference.cache
+D:\VisualStudio\Federico Dávila\TP-02\TP-02\bin\Debug\TP-02.exe
+D:\VisualStudio\Federico Dávila\TP-02\TP-02\bin\Debug\TP-02.pdb
+D:\VisualStudio\Federico Dávila\TP-02\TP-02\bin\Debug\Entidades.dll
+D:\VisualStudio\Federico Dávila\TP-02\TP-02\bin\Debug\Entidades.pdb
+D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-02\TP-02\bin\Debug\TP-02.exe.config
+D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-02\TP-02\obj\Debug\TP-02.exe
+D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-02\TP-02\obj\Debug\TP-02.pdb
+D:\Federico\VB .Net\Visual C#\utn\TPs\2018\TP-02\TP-02\obj\Debug\TP-02.csprojResolveAssemblyReference.cache
+D:\Alan.Passucci.2A\TP-02\TP-02\bin\Debug\TP-02.exe.config
+D:\Alan.Passucci.2A\TP-02\TP-02\obj\Debug\TP-02.exe
+D:\Alan.Passucci.2A\TP-02\TP-02\obj\Debug\TP-02.csprojResolveAssemblyReference.cache
+D:\Alan.Passucci.2A\TP-02\TP-02\bin\Debug\TP-02.exe
+D:\Alan.Passucci.2A\TP-02\TP-02\bin\Debug\TP-02.pdb
+D:\Alan.Passucci.2A\TP-02\TP-02\bin\Debug\Entidades.dll
+D:\Alan.Passucci.2A\TP-02\TP-02\bin\Debug\Entidades.pdb
+D:\Alan.Passucci.2A\TP-02\TP-02\obj\Debug\TP-02.pdb
