@@ -72,7 +72,15 @@ namespace Entidades_2018
         /// <returns>Retorna true si son iguales, false caso contrario</returns>
         public static bool operator ==(Producto v1, Producto v2)
         {
-            return (v1.codigoDeBarras == v2.codigoDeBarras);
+            bool retorno = false;
+            if (v1.Equals(v2))
+            {
+                if (v1.codigoDeBarras == v2.codigoDeBarras)
+                {
+                    retorno = true;
+                }
+            }
+            return retorno;
         }
 
         /// <summary>

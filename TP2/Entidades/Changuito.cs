@@ -23,6 +23,7 @@ namespace Entidades_2018
         {
             this.productos = new List<Producto>();
         }
+
         public Changuito(int espacioDisponible) : this()
         {
             this.espacioDisponible = espacioDisponible;
@@ -61,15 +62,21 @@ namespace Entidades_2018
                 {
                     case ETipo.Snacks:
                         if(v is Snacks)
+                        {
                             sb.AppendLine(((Snacks)v).Mostrar());
+                        }
                         break;
                     case ETipo.Dulce:
                         if(v is Dulce)
+                        {
                             sb.AppendLine(((Dulce)v).Mostrar());
+                        }
                         break;
                     case ETipo.Leche:
                         if(v is Leche)
+                        {
                             sb.AppendLine(((Leche)v).Mostrar());
+                        }   
                         break;
                     default:
                         sb.AppendLine(v.Mostrar());
