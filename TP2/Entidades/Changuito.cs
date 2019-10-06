@@ -13,17 +13,28 @@ namespace Entidades_2018
     {
         List<Producto> productos;
         private int espacioDisponible;
+
         public enum ETipo
         {
-            Dulce, Leche, Snacks, Todos
+            Dulce,
+            Leche,
+            Snacks,
+            Todos
         }
 
         #region "Constructores"
+        /// <summary>
+        /// Constructor del Changuito que inicializa la lista de productos
+        /// </summary>
         private Changuito()
         {
             this.productos = new List<Producto>();
         }
 
+        /// <summary>
+        /// Constructor del Changuito que inicializa el espacio disponible
+        /// </summary>
+        /// <param name="espacioDisponible"></param>
         public Changuito(int espacioDisponible) : this()
         {
             this.espacioDisponible = espacioDisponible;
@@ -34,7 +45,7 @@ namespace Entidades_2018
         /// <summary>
         /// Muestro el Changuito y TODOS los Productos
         /// </summary>
-        /// <returns></returns>
+        /// <returns>Retorna todos los Productos en el Changuito</returns>
         public override string ToString()
         {
             return Changuito.Mostrar(this, ETipo.Todos);
@@ -49,7 +60,7 @@ namespace Entidades_2018
         /// </summary>
         /// <param name="c">Elemento a exponer</param>
         /// <param name="ETipo">Tipos de ítems de la lista a mostrar</param>
-        /// <returns></returns>
+        /// <returns>Retorna todos los Productos en el Changuito en formato string</returns>
         public static string Mostrar(Changuito c, ETipo tipo)
         {
             StringBuilder sb = new StringBuilder();
@@ -94,21 +105,21 @@ namespace Entidades_2018
         /// </summary>
         /// <param name="c">Objeto donde se agregará el elemento</param>
         /// <param name="p">Objeto a agregar</param>
-        /// <returns></returns>
+        /// <returns>Retorna el objeto Changuito</returns>
         public static Changuito operator +(Changuito c, Producto p)
         {
-            bool flag = false;
+            bool existe = false;
             if (c.productos.Count < c.espacioDisponible)
             {
                 foreach (Producto v in c.productos)
                 {
                     if (v == p)
                     {
-                        flag = true;
+                        existe = true;
                         break;
                     }
                 }
-                if (!flag)
+                if (!existe)
                 {
                     c.productos.Add(p);
                 }
@@ -121,7 +132,7 @@ namespace Entidades_2018
         /// </summary>
         /// <param name="c">Objeto donde se quitará el elemento</param>
         /// <param name="p">Objeto a quitar</param>
-        /// <returns></returns>
+        /// <returns>Retorna el objeto Changuito</returns>
         public static Changuito operator -(Changuito c, Producto p)
         {
             if (c.productos.Count > 0)

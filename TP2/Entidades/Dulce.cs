@@ -11,9 +11,9 @@ namespace Entidades_2018
         /// <summary>
         /// Instancia todos los datos del Dulce
         /// </summary>
-        /// <param name="marca"></param>
-        /// <param name="codigo"></param>
-        /// <param name="color"></param>
+        /// <param name="marca">Marca del Dulce</param>
+        /// <param name="codigo">Codigo de barras del Dulce</param>
+        /// <param name="color">Color del empaque del Dulce</param>
         public Dulce(EMarca marca, string codigo, ConsoleColor color)
             : base(codigo, marca, color)
         {
@@ -22,7 +22,13 @@ namespace Entidades_2018
         /// <summary>
         /// Devuelve la cantidad de calorías del Dulce (80)
         /// </summary>
-        protected override short CantidadCalorias { get { return 80; } }
+        protected override short CantidadCalorias
+        {
+            get
+            {
+                return 80;
+            }
+        }
 
         /// <summary>
         /// Muestra todos los datos del Dulce

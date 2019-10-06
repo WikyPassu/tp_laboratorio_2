@@ -22,7 +22,13 @@ namespace Entidades_2018
         /// <summary>
         /// Devuelve la cantidad de calorías del Snack (104)
         /// </summary>
-        protected override short CantidadCalorias { get { return 104; } }
+        protected override short CantidadCalorias
+        {
+            get
+            {
+                return 104;
+            }
+        }
 
         /// <summary>
         /// Muestra todos los datos del Snack

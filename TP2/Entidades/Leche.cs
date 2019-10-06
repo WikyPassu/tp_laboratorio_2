@@ -13,28 +13,33 @@ namespace Entidades_2018
         /// <summary>
         /// TIPO de Leche
         /// </summary>
-        public enum ETipo { Entera, Descremada }
+        public enum ETipo
+        {
+            Entera,
+            Descremada
+        }
+
         ETipo tipo;
 
         /// <summary>
         /// Instancia los datos de la Leche. Por defecto, TIPO será ENTERA
         /// </summary>
-        /// <param name="marca"></param>
-        /// <param name="codigo"></param>
-        /// <param name="color"></param>
+        /// <param name="marca">Marca de la Leche</param>
+        /// <param name="codigo">Codigo de barras de la Leche</param>
+        /// <param name="color">Color del empaque de la Leche</param>
         public Leche(EMarca marca, string codigo, ConsoleColor color)
             : base(codigo, marca, color)
         {
-            tipo = ETipo.Entera;
+            this.tipo = ETipo.Entera;
         }
 
         /// <summary>
         /// Instancia los datos de la Leche.
         /// </summary>
-        /// <param name="marca"></param>
-        /// <param name="codigo"></param>
-        /// <param name="color"></param>
-        /// <param name="tipo"></param>
+        /// <param name="marca">Marca de la Leche</param>
+        /// <param name="codigo">Codigo de barras de la Leche</param>
+        /// <param name="color">Color del empaque de la Leche</param>
+        /// <param name="tipo">Tipo de Leche</param>
         public Leche(EMarca marca, string codigo, ConsoleColor color, ETipo tipo)
             : this(marca, codigo, color)
         {
@@ -43,7 +48,13 @@ namespace Entidades_2018
         /// <summary>
         /// Devuelve la cantidad de calorías de la Leche (20)
         /// </summary>
-        protected override short CantidadCalorias { get { return 20; } }
+        protected override short CantidadCalorias
+        {
+            get
+            {
+                return 20;
+            }
+        }
 
         /// <summary>
         /// Muestra todos los datos de la Leche

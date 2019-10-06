@@ -16,8 +16,14 @@ namespace Entidades_2018
         /// </summary>
         public enum EMarca
         {
-            Serenisima, Campagnola, Arcor, Ilolay, Sancor, Pepsico
+            Serenisima,
+            Campagnola,
+            Arcor,
+            Ilolay,
+            Sancor,
+            Pepsico
         }
+
         private EMarca marca;
         private string codigoDeBarras;
         private ConsoleColor colorPrimarioEmpaque;
@@ -30,7 +36,9 @@ namespace Entidades_2018
         /// <summary>
         /// Instancia todos los datos del Producto.
         /// </summary>
-        /// <returns></returns>
+        /// <param name="codigo">Codigo de barras del Producto</param>
+        /// <param name="marca">Marca del Producto</param>
+        /// <param name="color">Color del empaque del Producto</param>
         public Producto(string codigo, EMarca marca, ConsoleColor color) 
         {
             this.codigoDeBarras = codigo;
@@ -50,7 +58,7 @@ namespace Entidades_2018
         /// <summary>
         /// Convierte explicitamente a string los datos del producto
         /// </summary>
-        /// <param name="p"></param>
+        /// <param name="p">Producto a convertir sus datos</param>
         /// <returns>Retorna los datos del Producto en formato string</returns>
         public static explicit operator string(Producto p)
         {
@@ -67,8 +75,8 @@ namespace Entidades_2018
         /// <summary>
         /// Dos productos son iguales si comparten el mismo código de barras
         /// </summary>
-        /// <param name="v1"></param>
-        /// <param name="v2"></param>
+        /// <param name="v1">Un Producto</param>
+        /// <param name="v2">Otro Producto</param>
         /// <returns>Retorna true si son iguales, false caso contrario</returns>
         public static bool operator ==(Producto v1, Producto v2)
         {
@@ -86,8 +94,8 @@ namespace Entidades_2018
         /// <summary>
         /// Dos productos son distintos si su código de barras es distinto
         /// </summary>
-        /// <param name="v1"></param>
-        /// <param name="v2"></param>
+        /// <param name="v1">Un Producto</param>
+        /// <param name="v2">Otro producto</param>
         /// <returns>Retorna true si son diferentes, false caso contrario</returns>
         public static bool operator !=(Producto v1, Producto v2)
         {
