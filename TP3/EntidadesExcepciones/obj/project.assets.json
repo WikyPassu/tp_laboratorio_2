@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alan_\\Desktop\\TP3\\Passucci.Alan.2A.TP3\\EntidadesExcepciones\\EntidadesExcepciones.csproj",
+      "projectUniqueName": "C:\\Users\\alan_\\Desktop\\tp_laboratorio_2\\TP3\\EntidadesExcepciones\\EntidadesExcepciones.csproj",
       "projectName": "EntidadesExcepciones",
-      "projectPath": "C:\\Users\\alan_\\Desktop\\TP3\\Passucci.Alan.2A.TP3\\EntidadesExcepciones\\EntidadesExcepciones.csproj",
+      "projectPath": "C:\\Users\\alan_\\Desktop\\tp_laboratorio_2\\TP3\\EntidadesExcepciones\\EntidadesExcepciones.csproj",
       "packagesPath": "C:\\Users\\alan_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alan_\\Desktop\\TP3\\Passucci.Alan.2A.TP3\\EntidadesExcepciones\\obj\\",
+      "outputPath": "C:\\Users\\alan_\\Desktop\\tp_laboratorio_2\\TP3\\EntidadesExcepciones\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

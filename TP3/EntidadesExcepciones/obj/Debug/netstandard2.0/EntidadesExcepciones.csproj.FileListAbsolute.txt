@@ -7,3 +7,12 @@ C:\Users\alan_\Desktop\TP3\Passucci.Alan.2A.TP3\EntidadesExcepciones\obj\Debug\n
 C:\Users\alan_\Desktop\TP3\Passucci.Alan.2A.TP3\EntidadesExcepciones\obj\Debug\netstandard2.0\EntidadesExcepciones.AssemblyInfo.cs
 C:\Users\alan_\Desktop\TP3\Passucci.Alan.2A.TP3\EntidadesExcepciones\obj\Debug\netstandard2.0\EntidadesExcepciones.dll
 C:\Users\alan_\Desktop\TP3\Passucci.Alan.2A.TP3\EntidadesExcepciones\obj\Debug\netstandard2.0\EntidadesExcepciones.pdb
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\EntidadesExcepciones\bin\Debug\netstandard2.0\EntidadesExcepciones.deps.json
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\EntidadesExcepciones\bin\Debug\netstandard2.0\EntidadesExcepciones.dll
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\EntidadesExcepciones\bin\Debug\netstandard2.0\EntidadesExcepciones.pdb
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\EntidadesExcepciones\obj\Debug\netstandard2.0\EntidadesExcepciones.csprojAssemblyReference.cache
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\EntidadesExcepciones\obj\Debug\netstandard2.0\EntidadesExcepciones.csproj.CoreCompileInputs.cache
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\EntidadesExcepciones\obj\Debug\netstandard2.0\EntidadesExcepciones.AssemblyInfoInputs.cache
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\EntidadesExcepciones\obj\Debug\netstandard2.0\EntidadesExcepciones.AssemblyInfo.cs
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\EntidadesExcepciones\obj\Debug\netstandard2.0\EntidadesExcepciones.dll
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\EntidadesExcepciones\obj\Debug\netstandard2.0\EntidadesExcepciones.pdb

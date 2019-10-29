@@ -201,11 +201,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\alan_\\Desktop\\TP3\\Passucci.Alan.2A.TP3\\EntidadesAbstractas\\EntidadesAbstractas.csproj",
+      "projectUniqueName": "C:\\Users\\alan_\\Desktop\\tp_laboratorio_2\\TP3\\EntidadesAbstractas\\EntidadesAbstractas.csproj",
       "projectName": "EntidadesAbstractas",
-      "projectPath": "C:\\Users\\alan_\\Desktop\\TP3\\Passucci.Alan.2A.TP3\\EntidadesAbstractas\\EntidadesAbstractas.csproj",
+      "projectPath": "C:\\Users\\alan_\\Desktop\\tp_laboratorio_2\\TP3\\EntidadesAbstractas\\EntidadesAbstractas.csproj",
       "packagesPath": "C:\\Users\\alan_\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\alan_\\Desktop\\TP3\\Passucci.Alan.2A.TP3\\EntidadesAbstractas\\obj\\",
+      "outputPath": "C:\\Users\\alan_\\Desktop\\tp_laboratorio_2\\TP3\\EntidadesAbstractas\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -224,8 +224,8 @@
       "frameworks": {
         "netstandard2.0": {
           "projectReferences": {
-            "C:\\Users\\alan_\\Desktop\\TP3\\Passucci.Alan.2A.TP3\\EntidadesExcepciones\\EntidadesExcepciones.csproj": {
-              "projectPath": "C:\\Users\\alan_\\Desktop\\TP3\\Passucci.Alan.2A.TP3\\EntidadesExcepciones\\EntidadesExcepciones.csproj"
+            "C:\\Users\\alan_\\Desktop\\tp_laboratorio_2\\TP3\\EntidadesExcepciones\\EntidadesExcepciones.csproj": {
+              "projectPath": "C:\\Users\\alan_\\Desktop\\tp_laboratorio_2\\TP3\\EntidadesExcepciones\\EntidadesExcepciones.csproj"
             }
           }
         }

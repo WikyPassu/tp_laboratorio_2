@@ -105,7 +105,7 @@ namespace EntidadesAbstractas
         public override string ToString()
         {
             StringBuilder datosPersona = new StringBuilder();
-            datosPersona.AppendFormat("NOMBRE COMPLETO: {0}, {1}\nNACIONALIDAD: {2}", this.Apellido, this.Nombre, this.Nacionalidad);
+            datosPersona.AppendFormat("NOMBRE COMPLETO: {0}, {1}\nNACIONALIDAD: {2}\n", this.Apellido, this.Nombre, this.Nacionalidad);
             return datosPersona.ToString();
         }
 
@@ -120,7 +120,7 @@ namespace EntidadesAbstractas
             int datoEnEntero = 0;
             bool soloNumeros = true;
             bool respetaCantidad = true;
-            bool respetaRango = true;
+            bool respetaRango = false;
 
             foreach (char caracter in dato)
             {
@@ -143,7 +143,7 @@ namespace EntidadesAbstractas
                         }
                         else if (datoEnEntero > 0 && datoEnEntero <= 89999999)
                         {
-                            respetaRango = false;
+                            respetaRango = true;
                         }
                         break;
                     case ENacionalidad.Extranjero:
@@ -153,7 +153,7 @@ namespace EntidadesAbstractas
                         }
                         else if (datoEnEntero > 89999999 && datoEnEntero <= 99999999)
                         {
-                            respetaRango = false;
+                            respetaRango = true;
                         }
                         break;
                 }
@@ -165,11 +165,11 @@ namespace EntidadesAbstractas
             }
             else if (!soloNumeros || !respetaCantidad)
             {
-                throw new DniInvalidoException("Formato de DNI inválido");
+                throw new DniInvalidoException("Formato de DNI inválido.");
             }
             else if (!respetaRango)
             {
-                throw new NacionalidadInvalidaException("La nacionalidad no se condice con el número de DNI");
+                throw new NacionalidadInvalidaException("La nacionalidad no se condice con el número de DNI.");
             }
 
             return dniValidado;
