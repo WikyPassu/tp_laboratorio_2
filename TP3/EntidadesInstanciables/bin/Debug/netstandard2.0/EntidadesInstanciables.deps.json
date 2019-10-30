@@ -10,6 +10,7 @@
       "EntidadesInstanciables/1.0.0": {
         "dependencies": {
           "EntidadesAbstractas": "1.0.0",
+          "EntidadesArchivos": "1.0.0",
           "NETStandard.Library": "2.0.3"
         },
         "runtime": {
@@ -28,6 +29,14 @@
         },
         "runtime": {
           "EntidadesAbstractas.dll": {}
+        }
+      },
+      "EntidadesArchivos/1.0.0": {
+        "dependencies": {
+          "EntidadesExcepciones": "1.0.0"
+        },
+        "runtime": {
+          "EntidadesArchivos.dll": {}
         }
       },
       "EntidadesExcepciones/1.0.0": {
@@ -58,6 +67,11 @@
       "hashPath": "netstandard.library.2.0.3.nupkg.sha512"
     },
     "EntidadesAbstractas/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EntidadesArchivos/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

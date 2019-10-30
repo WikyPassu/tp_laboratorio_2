@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.IO;
+using EntidadesArchivos;
 
 namespace EntidadesInstanciables
 {
@@ -62,74 +63,37 @@ namespace EntidadesInstanciables
         public override string ToString()
         {
             StringBuilder datos = new StringBuilder();
-            datos.AppendFormat("JORNADA:\nCLASE DE {0} ", this.Clase);
-            datos.AppendFormat("POR {0}ALUMNOS:\n", this.Instructor.ToString());
+            datos.AppendFormat("CLASE DE {0} ", this.Clase);
+            datos.AppendFormat("POR {0}\nALUMNOS:\n", this.Instructor.ToString());
             foreach (Alumno alumno in this.Alumnos)
             {
-                datos.AppendFormat("{0}\n", alumno.ToString());
+                datos.Append(alumno.ToString());
             }
-            datos.AppendLine("<------------------------------------------------->\n");
+            datos.AppendLine("<------------------------------------------------->");
             return datos.ToString();
         }
 
         public static bool Guardar(Jornada jornada)
         {
             bool retorno = false;
-            try
+            Texto datosJornada = new Texto();
+
+            if (datosJornada.Guardar(AppDomain.CurrentDomain.BaseDirectory + @"\Jornada.txt", jornada.ToString()))
             {
-                string ruta = AppDomain.CurrentDomain.BaseDirectory + @"\Jornada.txt";
-                using (StreamWriter escritor = new StreamWriter(ruta))
-                {
-                    escritor.WriteLine(jornada.ToString());
-                    retorno = true;
-                }
+                retorno = true;
             }
-            catch (DirectoryNotFoundException error)
-            {
-                Console.WriteLine(error.Message);
-            }
-            catch (ArgumentException error)
-            {
-                Console.WriteLine(error.Message);
-            }
-            catch (Exception error)
-            {
-                Console.WriteLine(error.Message);
-            }
+            
             return retorno;
         }
 
         public static string Leer()
         {
-            StringBuilder datosJornada = new StringBuilder();
-            string ruta = AppDomain.CurrentDomain.BaseDirectory + @"\Jornada.txt";
-            
-            try
-            {
-                using (StreamReader lector = new StreamReader(ruta))
-                {
-                    string linea = lector.ReadLine();
+            string jornadaCargada = null;
+            Texto datosJornada = new Texto();
 
-                    while (linea != null)
-                    {
-                        datosJornada.AppendLine(linea);
-                    }
-                }
-            }
-            catch (DirectoryNotFoundException error)
-            {
-                Console.WriteLine(error.ToString());
-            }
-            catch (ArgumentException error)
-            {
-                Console.WriteLine(error.ToString());
-            }
-            catch (Exception error)
-            {
-                Console.WriteLine(error.ToString());
-            }
+            datosJornada.Leer(AppDomain.CurrentDomain.BaseDirectory + @"Jornada.txt", out jornadaCargada);
 
-            return datosJornada.ToString();
+            return jornadaCargada;
         }
 
         public static bool operator ==(Jornada j, Alumno a)

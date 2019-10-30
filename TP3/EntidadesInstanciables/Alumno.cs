@@ -18,7 +18,6 @@ namespace EntidadesInstanciables
         }
 
         public Alumno()
-            : base()
         {
             this.claseQueToma = Universidad.EClases.Laboratorio;
             this.estadoCuenta = EEstadoCuenta.AlDia;
@@ -39,23 +38,23 @@ namespace EntidadesInstanciables
 
         protected override string ParticiparEnClase()
         {
-            return string.Format("TOMA CLASES DE {0}", this.claseQueToma);
+            return string.Format("TOMA CLASES DE {0}\n", this.claseQueToma);
         }
 
         protected override string MostrarDatos()
         {
             StringBuilder datos = new StringBuilder();
 
-            datos.AppendLine(base.MostrarDatos());
+            datos.Append(base.MostrarDatos());
             if (this.estadoCuenta == EEstadoCuenta.AlDia)
             {
-                datos.AppendFormat("ESTADO DE CUENTA: Cuota al día\n");
+                datos.AppendFormat("\nESTADO DE CUENTA: Cuota al día\n");
             }
             else
             {
-                datos.AppendFormat("ESTADO DE CUENTA: {0}\n", this.estadoCuenta);
+                datos.AppendFormat("\nESTADO DE CUENTA: {0}\n", this.estadoCuenta);
             }
-            datos.AppendLine(this.ParticiparEnClase());
+            datos.Append(this.ParticiparEnClase());
 
             return datos.ToString();
         }

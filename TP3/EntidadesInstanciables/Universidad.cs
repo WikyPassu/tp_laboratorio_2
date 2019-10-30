@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using EntidadesExcepciones;
+using EntidadesArchivos;
 
 namespace EntidadesInstanciables
 {
@@ -77,9 +78,10 @@ namespace EntidadesInstanciables
         private static string MostrarDatos(Universidad uni)
         {
             StringBuilder datos = new StringBuilder();
+            datos.AppendLine("JORNADA:");
             foreach (Jornada jornada in uni.Jornadas)
             {
-                datos.AppendFormat(jornada.ToString());
+                datos.AppendLine(jornada.ToString());
             }
             return datos.ToString();
         }
@@ -87,6 +89,29 @@ namespace EntidadesInstanciables
         public override string ToString()
         {
             return Universidad.MostrarDatos(this);
+        }
+
+        public static bool Guardar(Universidad uni)
+        {
+            bool retorno = false;
+            Xml<Universidad> archivoGuardado = new Xml<Universidad>();
+
+            if (archivoGuardado.Guardar(AppDomain.CurrentDomain.BaseDirectory + @"\Universidad.xml", uni))
+            {
+                retorno = true;
+            }
+
+            return retorno;
+        }
+
+        public static Universidad Leer()
+        {
+            Universidad universidadCargada = null;
+            Xml<Universidad> archivoCargado = new Xml<Universidad>();
+
+            archivoCargado.Leer(AppDomain.CurrentDomain.BaseDirectory + @"\Universidad.xml", out universidadCargada);
+
+            return universidadCargada;
         }
 
         public static bool operator ==(Universidad g, Alumno a)

@@ -218,3 +218,5 @@ C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\TestMain\obj\Debug\TestMain.csproj.C
 C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\TestMain\obj\Debug\TestMain.csproj.CopyComplete
 C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\TestMain\obj\Debug\TestMain.exe
 C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\TestMain\obj\Debug\TestMain.pdb
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\TestMain\bin\Debug\EntidadesArchivos.dll
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\TestMain\bin\Debug\EntidadesArchivos.pdb

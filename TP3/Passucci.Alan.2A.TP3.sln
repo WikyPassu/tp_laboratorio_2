@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntidadesExcepciones", "Ent
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestMain", "TestMain\TestMain.csproj", "{D16593B5-3650-489F-AEAC-8F7B45CC2938}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntidadesInstanciables", "EntidadesInstanciables\EntidadesInstanciables.csproj", "{FECD218E-F33A-4707-9896-E7A930005D2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EntidadesInstanciables", "EntidadesInstanciables\EntidadesInstanciables.csproj", "{FECD218E-F33A-4707-9896-E7A930005D2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EntidadesArchivos", "EntidadesArchivos\EntidadesArchivos.csproj", "{1C433AAB-68BE-4D64-A49E-7C242D0941AA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{FECD218E-F33A-4707-9896-E7A930005D2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FECD218E-F33A-4707-9896-E7A930005D2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FECD218E-F33A-4707-9896-E7A930005D2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C433AAB-68BE-4D64-A49E-7C242D0941AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C433AAB-68BE-4D64-A49E-7C242D0941AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C433AAB-68BE-4D64-A49E-7C242D0941AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C433AAB-68BE-4D64-A49E-7C242D0941AA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -12,3 +12,5 @@ C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\EntidadesInstanciables\obj\Debug\net
 C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\EntidadesInstanciables\obj\Debug\netstandard2.0\EntidadesInstanciables.csproj.CopyComplete
 C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\EntidadesInstanciables\obj\Debug\netstandard2.0\EntidadesInstanciables.dll
 C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\EntidadesInstanciables\obj\Debug\netstandard2.0\EntidadesInstanciables.pdb
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\EntidadesInstanciables\bin\Debug\netstandard2.0\EntidadesArchivos.dll
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3\EntidadesInstanciables\bin\Debug\netstandard2.0\EntidadesArchivos.pdb

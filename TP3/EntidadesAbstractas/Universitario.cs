@@ -9,7 +9,6 @@ namespace EntidadesAbstractas
         private int legajo;
 
         public Universitario()
-            : base()
         {
             this.legajo = 0;
         }

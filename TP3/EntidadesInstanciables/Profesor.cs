@@ -16,7 +16,6 @@ namespace EntidadesInstanciables
         }
 
         public Profesor()
-            : base()
         {
             this.clasesDelDia = new Queue<Universidad.EClases>();
             this._randomClases();
@@ -52,10 +51,7 @@ namespace EntidadesInstanciables
 
         protected override string MostrarDatos()
         {
-            StringBuilder datos = new StringBuilder();
-            datos.AppendLine(base.MostrarDatos());
-            datos.AppendLine(this.ParticiparEnClase());
-            return datos.ToString();
+            return base.MostrarDatos() + this.ParticiparEnClase();
         }
 
         public override string ToString()

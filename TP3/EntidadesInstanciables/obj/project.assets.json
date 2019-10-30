@@ -39,6 +39,19 @@
           "bin/placeholder/EntidadesAbstractas.dll": {}
         }
       },
+      "EntidadesArchivos/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "EntidadesExcepciones": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/EntidadesArchivos.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/EntidadesArchivos.dll": {}
+        }
+      },
       "EntidadesExcepciones/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
@@ -200,6 +213,11 @@
       "path": "../EntidadesAbstractas/EntidadesAbstractas.csproj",
       "msbuildProject": "../EntidadesAbstractas/EntidadesAbstractas.csproj"
     },
+    "EntidadesArchivos/1.0.0": {
+      "type": "project",
+      "path": "../EntidadesArchivos/EntidadesArchivos.csproj",
+      "msbuildProject": "../EntidadesArchivos/EntidadesArchivos.csproj"
+    },
     "EntidadesExcepciones/1.0.0": {
       "type": "project",
       "path": "../EntidadesExcepciones/EntidadesExcepciones.csproj",
@@ -209,6 +227,7 @@
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
       "EntidadesAbstractas >= 1.0.0",
+      "EntidadesArchivos >= 1.0.0",
       "NETStandard.Library >= 2.0.3"
     ]
   },
@@ -244,6 +263,9 @@
           "projectReferences": {
             "C:\\Users\\alan_\\Desktop\\tp_laboratorio_2\\TP3\\EntidadesAbstractas\\EntidadesAbstractas.csproj": {
               "projectPath": "C:\\Users\\alan_\\Desktop\\tp_laboratorio_2\\TP3\\EntidadesAbstractas\\EntidadesAbstractas.csproj"
+            },
+            "C:\\Users\\alan_\\Desktop\\tp_laboratorio_2\\TP3\\EntidadesArchivos\\EntidadesArchivos.csproj": {
+              "projectPath": "C:\\Users\\alan_\\Desktop\\tp_laboratorio_2\\TP3\\EntidadesArchivos\\EntidadesArchivos.csproj"
             }
           }
         }

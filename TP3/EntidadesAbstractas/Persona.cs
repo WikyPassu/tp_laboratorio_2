@@ -76,10 +76,10 @@ namespace EntidadesAbstractas
 
         public Persona()
         {
-            this.apellido = "";
             this.dni = 0;
-            this.nacionalidad = ENacionalidad.Argentino;
             this.nombre = "";
+            this.apellido = "";
+            this.nacionalidad = ENacionalidad.Argentino;
         }
 
         public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
@@ -185,6 +185,7 @@ namespace EntidadesAbstractas
                 if (!char.IsLetter(caracter) && caracter != ' ')
                 {
                     esValido = false;
+                    break;
                 }
             }
             if (esValido)
