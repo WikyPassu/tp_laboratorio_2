@@ -2,79 +2,96 @@
 <Universidad xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Alumnos>
     <Alumno>
-      <Apellido>Lopez</Apellido>
       <DNI>12234456</DNI>
-      <Nacionalidad>Argentino</Nacionalidad>
       <Nombre>Juan</Nombre>
+      <Apellido>Lopez</Apellido>
+      <Nacionalidad>Argentino</Nacionalidad>
     </Alumno>
     <Alumno>
-      <Apellido>Hernandez</Apellido>
       <DNI>92264456</DNI>
-      <Nacionalidad>Extranjero</Nacionalidad>
       <Nombre>Miguel</Nombre>
-    </Alumno>
-    <Alumno>
-      <Apellido>Gonzalez</Apellido>
-      <DNI>12236456</DNI>
-      <Nacionalidad>Argentino</Nacionalidad>
-      <Nombre>Carlos</Nombre>
-    </Alumno>
-    <Alumno>
-      <Apellido>Perez</Apellido>
-      <DNI>12234656</DNI>
-      <Nacionalidad>Argentino</Nacionalidad>
-      <Nombre>Juan</Nombre>
-    </Alumno>
-    <Alumno>
-      <Apellido>Suarez</Apellido>
-      <DNI>91122456</DNI>
+      <Apellido>Hernandez</Apellido>
       <Nacionalidad>Extranjero</Nacionalidad>
-      <Nombre>Joaquin</Nombre>
     </Alumno>
     <Alumno>
-      <Apellido>Smith</Apellido>
-      <DNI>22236456</DNI>
+      <DNI>12236456</DNI>
+      <Nombre>Carlos</Nombre>
+      <Apellido>Gonzalez</Apellido>
       <Nacionalidad>Argentino</Nacionalidad>
+    </Alumno>
+    <Alumno>
+      <DNI>12234656</DNI>
+      <Nombre>Juan</Nombre>
+      <Apellido>Perez</Apellido>
+      <Nacionalidad>Argentino</Nacionalidad>
+    </Alumno>
+    <Alumno>
+      <DNI>91122456</DNI>
+      <Nombre>Joaquin</Nombre>
+      <Apellido>Suarez</Apellido>
+      <Nacionalidad>Extranjero</Nacionalidad>
+    </Alumno>
+    <Alumno>
+      <DNI>22236456</DNI>
       <Nombre>Rodrigo</Nombre>
+      <Apellido>Smith</Apellido>
+      <Nacionalidad>Argentino</Nacionalidad>
     </Alumno>
   </Alumnos>
+  <Instructores>
+    <Profesor>
+      <DNI>12234456</DNI>
+      <Nombre>Juan</Nombre>
+      <Apellido>Lopez</Apellido>
+      <Nacionalidad>Argentino</Nacionalidad>
+    </Profesor>
+    <Profesor>
+      <DNI>32234456</DNI>
+      <Nombre>Roberto</Nombre>
+      <Apellido>Juarez</Apellido>
+      <Nacionalidad>Argentino</Nacionalidad>
+    </Profesor>
+  </Instructores>
   <Jornadas>
     <Jornada>
       <Alumnos>
         <Alumno>
-          <Apellido>Lopez</Apellido>
-          <DNI>12234456</DNI>
-          <Nacionalidad>Argentino</Nacionalidad>
-          <Nombre>Juan</Nombre>
-        </Alumno>
-        <Alumno>
-          <Apellido>Gonzalez</Apellido>
-          <DNI>12236456</DNI>
-          <Nacionalidad>Argentino</Nacionalidad>
-          <Nombre>Carlos</Nombre>
+          <DNI>91122456</DNI>
+          <Nombre>Joaquin</Nombre>
+          <Apellido>Suarez</Apellido>
+          <Nacionalidad>Extranjero</Nacionalidad>
         </Alumno>
       </Alumnos>
-      <Clase>Programacion</Clase>
+      <Clase>Laboratorio</Clase>
       <Instructor>
-        <Apellido>Juarez</Apellido>
-        <DNI>32234456</DNI>
+        <DNI>12234456</DNI>
+        <Nombre>Juan</Nombre>
+        <Apellido>Lopez</Apellido>
         <Nacionalidad>Argentino</Nacionalidad>
+      </Instructor>
+    </Jornada>
+    <Jornada>
+      <Alumnos>
+        <Alumno>
+          <DNI>92264456</DNI>
+          <Nombre>Miguel</Nombre>
+          <Apellido>Hernandez</Apellido>
+          <Nacionalidad>Extranjero</Nacionalidad>
+        </Alumno>
+        <Alumno>
+          <DNI>22236456</DNI>
+          <Nombre>Rodrigo</Nombre>
+          <Apellido>Smith</Apellido>
+          <Nacionalidad>Argentino</Nacionalidad>
+        </Alumno>
+      </Alumnos>
+      <Clase>Legislacion</Clase>
+      <Instructor>
+        <DNI>32234456</DNI>
         <Nombre>Roberto</Nombre>
+        <Apellido>Juarez</Apellido>
+        <Nacionalidad>Argentino</Nacionalidad>
       </Instructor>
     </Jornada>
   </Jornadas>
-  <Instructores>
-    <Profesor>
-      <Apellido>Lopez</Apellido>
-      <DNI>12234456</DNI>
-      <Nacionalidad>Argentino</Nacionalidad>
-      <Nombre>Juan</Nombre>
-    </Profesor>
-    <Profesor>
-      <Apellido>Juarez</Apellido>
-      <DNI>32234456</DNI>
-      <Nacionalidad>Argentino</Nacionalidad>
-      <Nombre>Roberto</Nombre>
-    </Profesor>
-  </Instructores>
 </Universidad>

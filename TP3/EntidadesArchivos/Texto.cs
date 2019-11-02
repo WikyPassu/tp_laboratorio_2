@@ -16,10 +16,9 @@ namespace EntidadesArchivos
 
             try
             {
-                XmlSerializer serializador = new XmlSerializer(typeof(string));
-                using (TextWriter escritor = new StreamWriter(archivo))
+                using (StreamWriter escritor = new StreamWriter(archivo))
                 {
-                    serializador.Serialize(escritor, datos);
+                    escritor.WriteLine(datos);
                     retorno = true;
                 }
             }
@@ -39,10 +38,9 @@ namespace EntidadesArchivos
 
             try
             {
-                XmlSerializer serializador = new XmlSerializer(typeof(string));
-                using (TextReader lector = new StreamReader(archivo))
+                using (StreamReader lector = new StreamReader(archivo))
                 {
-                    datos = (string)serializador.Deserialize(lector);
+                    datos = lector.ReadToEnd();
                     retorno = true;
                 }
             }

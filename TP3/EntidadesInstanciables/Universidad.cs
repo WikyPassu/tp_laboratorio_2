@@ -9,9 +9,9 @@ namespace EntidadesInstanciables
     public class Universidad
     {
         private List<Alumno> alumnos;
-        private List<Jornada> jornada;
         private List<Profesor> profesores;
-
+        private List<Jornada> jornada;
+        
         public List<Alumno> Alumnos
         {
             get
@@ -21,6 +21,18 @@ namespace EntidadesInstanciables
             set
             {
                 this.alumnos = new List<Alumno>(value);
+            }
+        }
+        
+        public List<Profesor> Instructores
+        {
+            get
+            {
+                return this.profesores;
+            }
+            set
+            {
+                this.profesores = new List<Profesor>(value);
             }
         }
 
@@ -33,18 +45,6 @@ namespace EntidadesInstanciables
             set
             {
                 this.jornada = new List<Jornada>(value);
-            }
-        }
-
-        public List<Profesor> Instructores
-        {
-            get
-            {
-                return this.profesores;
-            }
-            set
-            {
-                this.profesores = new List<Profesor>(value);
             }
         }
 
