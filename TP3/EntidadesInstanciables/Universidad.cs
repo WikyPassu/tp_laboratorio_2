@@ -78,10 +78,12 @@ namespace EntidadesInstanciables
         private static string MostrarDatos(Universidad uni)
         {
             StringBuilder datos = new StringBuilder();
+
             datos.AppendLine("JORNADA:");
             foreach (Jornada jornada in uni.Jornadas)
             {
                 datos.AppendLine(jornada.ToString());
+
             }
             return datos.ToString();
         }

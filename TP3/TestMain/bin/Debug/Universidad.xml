@@ -56,6 +56,29 @@
     <Jornada>
       <Alumnos>
         <Alumno>
+          <DNI>12234456</DNI>
+          <Nombre>Juan</Nombre>
+          <Apellido>Lopez</Apellido>
+          <Nacionalidad>Argentino</Nacionalidad>
+        </Alumno>
+        <Alumno>
+          <DNI>12236456</DNI>
+          <Nombre>Carlos</Nombre>
+          <Apellido>Gonzalez</Apellido>
+          <Nacionalidad>Argentino</Nacionalidad>
+        </Alumno>
+      </Alumnos>
+      <Clase>Programacion</Clase>
+      <Instructor>
+        <DNI>32234456</DNI>
+        <Nombre>Roberto</Nombre>
+        <Apellido>Juarez</Apellido>
+        <Nacionalidad>Argentino</Nacionalidad>
+      </Instructor>
+    </Jornada>
+    <Jornada>
+      <Alumnos>
+        <Alumno>
           <DNI>91122456</DNI>
           <Nombre>Joaquin</Nombre>
           <Apellido>Suarez</Apellido>
@@ -87,9 +110,9 @@
       </Alumnos>
       <Clase>Legislacion</Clase>
       <Instructor>
-        <DNI>32234456</DNI>
-        <Nombre>Roberto</Nombre>
-        <Apellido>Juarez</Apellido>
+        <DNI>12234456</DNI>
+        <Nombre>Juan</Nombre>
+        <Apellido>Lopez</Apellido>
         <Nacionalidad>Argentino</Nacionalidad>
       </Instructor>
     </Jornada>

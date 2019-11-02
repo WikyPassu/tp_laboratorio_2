@@ -105,7 +105,10 @@ namespace EntidadesAbstractas
         public override string ToString()
         {
             StringBuilder datosPersona = new StringBuilder();
-            datosPersona.AppendFormat("NOMBRE COMPLETO: {0}, {1}\nNACIONALIDAD: {2}\n", this.Apellido, this.Nombre, this.Nacionalidad);
+
+            datosPersona.AppendLine("NOMBRE COMPLETO: " + this.Apellido + ", " + this.Nombre);
+            datosPersona.AppendLine("NACIONALIDAD: " + this.Nacionalidad);
+
             return datosPersona.ToString();
         }
 
@@ -118,58 +121,56 @@ namespace EntidadesAbstractas
         {
             int dniValidado = 0;
             int datoEnEntero = 0;
-            bool soloNumeros = true;
-            bool respetaCantidad = true;
-            bool respetaRango = false;
+            bool errorFormato = false;
+            bool errorRango = false;
 
-            foreach (char caracter in dato)
+            if (dato.Length < 1 || dato.Length > 8)
             {
-                if (!char.IsDigit(caracter))
+                errorFormato = true;
+            }
+            else
+            {
+                foreach (char caracter in dato)
                 {
-                    soloNumeros = false;
-                    break;
+                    if (!char.IsDigit(caracter))
+                    {
+                        errorFormato = true;
+                        break;
+                    }
                 }
             }
 
-            if (soloNumeros)
+            if (!errorFormato)
             {
                 datoEnEntero = int.Parse(dato);
                 switch (nacionalidad)
                 {
                     case ENacionalidad.Argentino:
-                        if (dato.Length < 1 && dato.Length > 8)
+                        if (datoEnEntero < 1 || datoEnEntero > 89999999)
                         {
-                            respetaCantidad = false;
-                        }
-                        else if (datoEnEntero > 0 && datoEnEntero <= 89999999)
-                        {
-                            respetaRango = true;
+                            errorRango = true;
                         }
                         break;
                     case ENacionalidad.Extranjero:
-                        if (dato.Length != 8)
+                        if (datoEnEntero < 90000000 || datoEnEntero > 99999999)
                         {
-                            respetaCantidad = false;
-                        }
-                        else if (datoEnEntero > 89999999 && datoEnEntero <= 99999999)
-                        {
-                            respetaRango = true;
+                            errorRango = true;
                         }
                         break;
                 }
             }
 
-            if (soloNumeros && respetaCantidad && respetaRango)
+            if (errorFormato)
+            {
+                throw new DniInvalidoException("El DNI presenta un error de formato.");
+            }
+            else if (errorRango)
+            {
+                throw new NacionalidadInvalidaException("La nacionalidad no se condice con el número de DNI");
+            }
+            else if (!errorFormato && !errorRango)
             {
                 dniValidado = datoEnEntero;
-            }
-            else if (!soloNumeros || !respetaCantidad)
-            {
-                throw new DniInvalidoException("Formato de DNI inválido.");
-            }
-            else if (!respetaRango)
-            {
-                throw new NacionalidadInvalidaException("La nacionalidad no se condice con el número de DNI.");
             }
 
             return dniValidado;

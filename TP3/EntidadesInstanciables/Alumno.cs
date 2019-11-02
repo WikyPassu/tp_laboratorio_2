@@ -38,21 +38,25 @@ namespace EntidadesInstanciables
 
         protected override string ParticiparEnClase()
         {
-            return string.Format("TOMA CLASES DE {0}\n", this.claseQueToma);
+            StringBuilder clase = new StringBuilder();
+
+            clase.AppendLine("TOMA CLASES DE " + this.claseQueToma);
+
+            return clase.ToString();
         }
 
         protected override string MostrarDatos()
         {
             StringBuilder datos = new StringBuilder();
 
-            datos.Append(base.MostrarDatos());
+            datos.AppendLine(base.MostrarDatos());
             if (this.estadoCuenta == EEstadoCuenta.AlDia)
             {
-                datos.AppendFormat("\nESTADO DE CUENTA: Cuota al día\n");
+                datos.AppendLine("ESTADO DE CUENTA: Cuota al día");
             }
             else
             {
-                datos.AppendFormat("\nESTADO DE CUENTA: {0}\n", this.estadoCuenta);
+                datos.AppendLine("ESTADO DE CUENTA: " + this.estadoCuenta);
             }
             datos.Append(this.ParticiparEnClase());
 

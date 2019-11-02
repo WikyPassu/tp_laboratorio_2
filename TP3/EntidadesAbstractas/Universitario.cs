@@ -29,8 +29,10 @@ namespace EntidadesAbstractas
         protected virtual string MostrarDatos()
         {
             StringBuilder datos = new StringBuilder();
-            datos.AppendFormat(base.ToString());
-            datos.AppendFormat("\nLEGAJO NÚMERO: {0}\n", this.legajo);
+
+            datos.AppendLine(base.ToString());
+            datos.AppendLine("LEGAJO NÚMERO: " + this.legajo);
+
             return datos.ToString();
         }
 

@@ -9,12 +9,13 @@ namespace EntidadesExcepciones
         private string mensajeBase;
 
         public DniInvalidoException()
+            : base()
         {
-            this.mensajeBase = "El DNI presenta un error de formato";
+            this.mensajeBase = "El DNI presenta un error de formato.";
         }
 
         public DniInvalidoException(Exception e)
-            : base(e.Message)
+            : this(e.Message)
         {
         }
 

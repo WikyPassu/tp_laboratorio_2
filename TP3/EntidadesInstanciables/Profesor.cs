@@ -43,7 +43,7 @@ namespace EntidadesInstanciables
             clases.AppendLine("CLASES DEL DÍA:");
             foreach (Universidad.EClases clase in this.clasesDelDia)
             {
-                clases.AppendFormat("{0}\n", clase);
+                clases.AppendLine(clase.ToString());
             }
 
             return clases.ToString();

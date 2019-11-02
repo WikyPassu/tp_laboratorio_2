@@ -63,13 +63,16 @@ namespace EntidadesInstanciables
         public override string ToString()
         {
             StringBuilder datos = new StringBuilder();
-            datos.AppendFormat("CLASE DE {0} ", this.Clase);
-            datos.AppendFormat("POR {0}\nALUMNOS:\n", this.Instructor.ToString());
+
+            datos.Append("CLASE DE " + this.Clase + " ");
+            datos.AppendLine("POR " + this.Instructor.ToString());
+            datos.AppendLine("ALUMNOS:");
             foreach (Alumno alumno in this.Alumnos)
             {
                 datos.Append(alumno.ToString());
             }
-            datos.AppendLine("<------------------------------------------------->");
+            datos.AppendLine("<------------------------------------------------>");
+
             return datos.ToString();
         }
 
