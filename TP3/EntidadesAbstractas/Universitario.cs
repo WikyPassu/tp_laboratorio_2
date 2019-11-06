@@ -23,7 +23,7 @@ namespace EntidadesAbstractas
 
         public override bool Equals(object obj)
         {
-            return obj is Universitario && this is Universitario;
+            return obj.GetType() == this.GetType();
         }
 
         protected virtual string MostrarDatos()
