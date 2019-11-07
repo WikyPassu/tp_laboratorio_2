@@ -10,17 +10,31 @@ namespace EntidadesInstanciables
         private Queue<Universidad.EClases> clasesDelDia;
         private static Random random;
 
+        /// <summary>
+        /// Constructor estatico de la clase profesor que instancia el atributo random.
+        /// </summary>
         static Profesor()
         {
             random = new Random();
         }
 
+        /// <summary>
+        /// Constructor por defecto de la clase profesor. Instancia las clases del dia del profesor de manera random.
+        /// </summary>
         public Profesor()
         {
             this.clasesDelDia = new Queue<Universidad.EClases>();
             this._randomClases();
         }
 
+        /// <summary>
+        /// Sobrecarga del constructor de la clase prodesor. Instancia los datos y clases que da el profesor pasados como parametro.
+        /// </summary>
+        /// <param name="id">ID del profesor.</param>
+        /// <param name="nombre">Nombre del profesor.</param>
+        /// <param name="apellido">Apellido del profesor.</param>
+        /// <param name="dni">DNI del profesor.</param>
+        /// <param name="nacionalidad">Nacionalidad del profesor.</param>
         public Profesor(int id, string nombre, string apellido, string dni, ENacionalidad nacionalidad)
             : base(id, nombre, apellido, dni, nacionalidad)
         {
@@ -28,6 +42,9 @@ namespace EntidadesInstanciables
             this._randomClases();
         }
 
+        /// <summary>
+        /// Genera dos clases de manera random para un profesor.
+        /// </summary>
         private void _randomClases()
         {
             for (int i=0; i<2; i++)
@@ -36,6 +53,10 @@ namespace EntidadesInstanciables
             }
         }
 
+        /// <summary>
+        /// Le da formato a las clases que da en el dia un profesor.
+        /// </summary>
+        /// <returns>Devuelve las clases que da en el dia un profesor con formato.</returns>
         protected override string ParticiparEnClase()
         {
             StringBuilder clases = new StringBuilder();
@@ -49,16 +70,30 @@ namespace EntidadesInstanciables
             return clases.ToString();
         }
 
+        /// <summary>
+        /// Le da formato a los datos de un profesor.
+        /// </summary>
+        /// <returns>Devuelve los datos de un profesor con formato.</returns>
         protected override string MostrarDatos()
         {
             return base.MostrarDatos() + this.ParticiparEnClase();
         }
 
+        /// <summary>
+        /// Devuelve los datos de un profesor.
+        /// </summary>
+        /// <returns>Devuelve los datos de un profesor con formato.</returns>
         public override string ToString()
         {
             return this.MostrarDatos();
         }
 
+        /// <summary>
+        /// Verifica si un profesor da una clase.
+        /// </summary>
+        /// <param name="i">Un profesor.</param>
+        /// <param name="clase">Una clase.</param>
+        /// <returns>Devuelve true si el profesor da la clase, false caso contrario.</returns>
         public static bool operator ==(Profesor i, Universidad.EClases clase)
         {
             bool retorno = false;
@@ -73,6 +108,12 @@ namespace EntidadesInstanciables
             return retorno;
         }
 
+        /// <summary>
+        /// Verifica si un profesor no da una clase.
+        /// </summary>
+        /// <param name="i">Un profesor.</param>
+        /// <param name="clase">Una clase.</param>
+        /// <returns>Devuelve true si el profesor no da la clase, false caso contrario.</returns>
         public static bool operator !=(Profesor i, Universidad.EClases clase)
         {
             return !(i == clase);

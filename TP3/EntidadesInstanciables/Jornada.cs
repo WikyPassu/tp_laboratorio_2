@@ -12,6 +12,9 @@ namespace EntidadesInstanciables
         private Universidad.EClases clase;
         private Profesor instructor;
 
+        /// <summary>
+        /// Propiedad de lectura y escritura de la lista de alumnos de una jornada.
+        /// </summary>
         public List<Alumno> Alumnos
         {
             get
@@ -24,6 +27,9 @@ namespace EntidadesInstanciables
             }
         }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura de la clase de una jornada.
+        /// </summary>
         public Universidad.EClases Clase
         {
             get
@@ -36,6 +42,9 @@ namespace EntidadesInstanciables
             }
         }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura del profesor de una jornada.
+        /// </summary>
         public Profesor Instructor
         {
             get
@@ -48,11 +57,19 @@ namespace EntidadesInstanciables
             }
         }
 
+        /// <summary>
+        /// Constructor por defecto de una jornada. Instancia la lista de alumnos de una jornada.
+        /// </summary>
         private Jornada()
         {
             this.alumnos = new List<Alumno>(); 
         }
 
+        /// <summary>
+        /// Sobrecarga del constructor de una jornada. Instancia los datos de una jornada pasados como parametro.
+        /// </summary>
+        /// <param name="clase"></param>
+        /// <param name="instructor"></param>
         public Jornada(Universidad.EClases clase, Profesor instructor)
             : this()
         {
@@ -60,6 +77,10 @@ namespace EntidadesInstanciables
             this.Instructor = instructor;
         }
         
+        /// <summary>
+        /// Le da formato a los datos de una jornada.
+        /// </summary>
+        /// <returns>Devuelve los datos de un jornada con formato.</returns>
         public override string ToString()
         {
             StringBuilder datos = new StringBuilder();
@@ -76,6 +97,11 @@ namespace EntidadesInstanciables
             return datos.ToString();
         }
 
+        /// <summary>
+        /// Guarda los datos de una jornada en un archivo de texto.
+        /// </summary>
+        /// <param name="jornada">Una jornada.</param>
+        /// <returns>Devuelve true si se pudo guardar, false caso contrario.</returns>
         public static bool Guardar(Jornada jornada)
         {
             bool retorno = false;
@@ -89,6 +115,10 @@ namespace EntidadesInstanciables
             return retorno;
         }
 
+        /// <summary>
+        /// Lee los datos de una jornada de un archivo de texto.
+        /// </summary>
+        /// <returns>Devuelve los datos de la jornada.</returns>
         public static string Leer()
         {
             string jornadaCargada = null;
@@ -99,6 +129,12 @@ namespace EntidadesInstanciables
             return jornadaCargada;
         }
 
+        /// <summary>
+        /// Verifica si un alumno participa en la clase de una jornada.
+        /// </summary>
+        /// <param name="j">Una jornada.</param>
+        /// <param name="a">Un alumno.</param>
+        /// <returns>Devuelve true si el alumno participa en dicha clase de la jornada, false caso contrario.</returns>
         public static bool operator ==(Jornada j, Alumno a)
         {
             bool retorno = false;
@@ -113,6 +149,12 @@ namespace EntidadesInstanciables
             return retorno;
         }
 
+        /// <summary>
+        /// Verifica si un alumno no participa en la clase de una jornada.
+        /// </summary>
+        /// <param name="j">Una jornada.</param>
+        /// <param name="a">Un alumno.</param>
+        /// <returns>Devuelve true si el alumno no participa en dicha clase de la jornada, false caso contrario.</returns>
         public static bool operator !=(Jornada j, Alumno a)
         {
             return !(j == a);

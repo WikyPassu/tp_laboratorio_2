@@ -70,23 +70,6 @@
       </Alumnos>
       <Clase>Programacion</Clase>
       <Instructor>
-        <DNI>32234456</DNI>
-        <Nombre>Roberto</Nombre>
-        <Apellido>Juarez</Apellido>
-        <Nacionalidad>Argentino</Nacionalidad>
-      </Instructor>
-    </Jornada>
-    <Jornada>
-      <Alumnos>
-        <Alumno>
-          <DNI>91122456</DNI>
-          <Nombre>Joaquin</Nombre>
-          <Apellido>Suarez</Apellido>
-          <Nacionalidad>Extranjero</Nacionalidad>
-        </Alumno>
-      </Alumnos>
-      <Clase>Laboratorio</Clase>
-      <Instructor>
         <DNI>12234456</DNI>
         <Nombre>Juan</Nombre>
         <Apellido>Lopez</Apellido>
@@ -110,9 +93,9 @@
       </Alumnos>
       <Clase>Legislacion</Clase>
       <Instructor>
-        <DNI>12234456</DNI>
-        <Nombre>Juan</Nombre>
-        <Apellido>Lopez</Apellido>
+        <DNI>32234456</DNI>
+        <Nombre>Roberto</Nombre>
+        <Apellido>Juarez</Apellido>
         <Nacionalidad>Argentino</Nacionalidad>
       </Instructor>
     </Jornada>

@@ -10,6 +10,12 @@ namespace EntidadesArchivos
 {
     public class Xml<T> : IArchivo<T>
     {
+        /// <summary>
+        /// Serializa cualquier tipo de dato en un archivo .xml en la ruta pasada como parametro.
+        /// </summary>
+        /// <param name="archivo">Ruta al archivo.</param>
+        /// <param name="datos">Lo que se quiere serializar.</param>
+        /// <returns>Devuelve true si se pudo guardar, false caso contrario.</returns>
         public bool Guardar(string archivo, T datos)
         {
             bool retorno = false;
@@ -23,15 +29,20 @@ namespace EntidadesArchivos
                     retorno = true;
                 }
             }
-            catch(ArchivosException error)
+            catch(Exception error)
             {
-                Console.WriteLine(error.Message);
-                retorno = false;
+                throw new ArchivosException(error);
             }
 
             return retorno;
         }
 
+        /// <summary>
+        /// Deserializa cualquier tipo de dato en un archivo .xml en la ruta pasada como parametro y los carga en una variable de cualquier tipo.
+        /// </summary>
+        /// <param name="archivo">Ruta al archivo.</param>
+        /// <param name="datos">Lo que se quiere deserializar.</param>
+        /// <returns>Devuelve true si se pudo leer, false caso contrario.</returns>
         public bool Leer(string archivo, out T datos)
         {
             bool retorno = false;
@@ -46,10 +57,9 @@ namespace EntidadesArchivos
                     retorno = true;
                 }
             }
-            catch (ArchivosException error)
+            catch (Exception error)
             {
-                Console.WriteLine(error.Message);
-                retorno = false;
+                throw new ArchivosException(error);
             }
 
             return retorno;

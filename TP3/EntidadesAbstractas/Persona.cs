@@ -7,11 +7,14 @@ namespace EntidadesAbstractas
 {
     public abstract class Persona
     {
-        private string apellido;
-        private int dni;
-        private ENacionalidad nacionalidad;
         private string nombre;
-
+        private string apellido;
+        private ENacionalidad nacionalidad;
+        private int dni;
+        
+        /// <summary>
+        /// Propiedad de lectura y escritura del DNI(entero) de la persona.
+        /// </summary>
         public int DNI
         {
             get
@@ -24,6 +27,9 @@ namespace EntidadesAbstractas
             }
         }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura del nombre de la persona.
+        /// </summary>
         public string Nombre
         {
             get
@@ -36,6 +42,9 @@ namespace EntidadesAbstractas
             }
         }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura del apellido de la persona.
+        /// </summary>
         public string Apellido
         {
             get
@@ -48,6 +57,9 @@ namespace EntidadesAbstractas
             }
         }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura de la nacionalidad de la persona.
+        /// </summary>
         public ENacionalidad Nacionalidad
         {
             get
@@ -59,7 +71,10 @@ namespace EntidadesAbstractas
                 this.nacionalidad = value;
             }
         }
-        
+
+        /// <summary>
+        /// Propiedad de lectura y escritura del DNI(string) de la persona.
+        /// </summary>
         public string StringToDNI
         {
             set
@@ -68,12 +83,18 @@ namespace EntidadesAbstractas
             }
         }
 
+        /// <summary>
+        /// Enumerado del tipo de nacionalidad de la persona.
+        /// </summary>
         public enum ENacionalidad
         {
             Argentino,
             Extranjero
         }
 
+        /// <summary>
+        /// Constructor por defecto de la clase persona. Instancia los datos por defecto de una persona.
+        /// </summary>
         public Persona()
         {
             this.dni = 0;
@@ -82,6 +103,12 @@ namespace EntidadesAbstractas
             this.nacionalidad = ENacionalidad.Argentino;
         }
 
+        /// <summary>
+        /// Sobrecarga del constructor de la clase persona. Instancia los datos de una persona pasados como parametro.
+        /// </summary>
+        /// <param name="nombre">Nombre de la persona.</param>
+        /// <param name="apellido">Apellido de la persona.</param>
+        /// <param name="nacionalidad">Nacionalidad de la persona.</param>
         public Persona(string nombre, string apellido, ENacionalidad nacionalidad)
             : this()
         {
@@ -90,18 +117,36 @@ namespace EntidadesAbstractas
             this.Nacionalidad = nacionalidad;
         }
 
+        /// <summary>
+        /// Sobrecarga del constructor de la clase persona. Instancia los datos de una persona pasados como parametro.
+        /// </summary>
+        /// <param name="nombre">Nombre de la persona.</param>
+        /// <param name="apellido">Apellido de la persona.</param>
+        /// <param name="dni">DNI de la persona.</param>
+        /// <param name="nacionalidad">Nacionalidad de la persona.</param>
         public Persona(string nombre, string apellido, int dni, ENacionalidad nacionalidad)
             : this(nombre, apellido, nacionalidad)
         {
             this.DNI = dni;
         }
 
+        /// <summary>
+        /// Sobrecarga del constructor de la clase persona. Instancia los datos de una persona pasados como parametro.
+        /// </summary>
+        /// <param name="nombre">Nombre de la persona.</param>
+        /// <param name="apellido">Apellido de la persona.</param>
+        /// <param name="dni">DNI de la persona.</param>
+        /// <param name="nacionalidad">Nacionalidad de la persona.</param>
         public Persona(string nombre, string apellido, string dni, ENacionalidad nacionalidad)
             : this(nombre, apellido, nacionalidad)
         {
             this.StringToDNI = dni;
         }
 
+        /// <summary>
+        /// Sobrecarga del metodo ToString()
+        /// </summary>
+        /// <returns>Devuelve los datos de una persona con formato especifico.</returns>
         public override string ToString()
         {
             StringBuilder datosPersona = new StringBuilder();
@@ -112,11 +157,23 @@ namespace EntidadesAbstractas
             return datosPersona.ToString();
         }
 
+        /// <summary>
+        /// Valida el DNI(entero) de acuerdo a la nacionalidad de la persona.
+        /// </summary>
+        /// <param name="nacionalidad">Nacionalidad de la persona.</param>
+        /// <param name="dato">DNI de la persona.</param>
+        /// <returns>Devuelve el DNI validado, 0 en caso de error.</returns>
         private int ValidarDni(ENacionalidad nacionalidad, int dato)
         {
             return this.ValidarDni(nacionalidad, dato.ToString());
         }
 
+        /// <summary>
+        /// Sobrecarga del metodo ValidarDni. Valida el DNI(string) de acuerdo a la nacionalidad de la persona.
+        /// </summary>
+        /// <param name="nacionalidad">Nacionalidad de la persona.</param>
+        /// <param name="dato">DNI de la persona.</param>
+        /// <returns>Devuelve el DNI validado, 0 en caso de error.</returns>
         private int ValidarDni(ENacionalidad nacionalidad, string dato)
         {
             int dniValidado = 0;
@@ -176,6 +233,11 @@ namespace EntidadesAbstractas
             return dniValidado;
         }
 
+        /// <summary>
+        /// Valida si un nombre/apellido es valido como tal.
+        /// </summary>
+        /// <param name="dato">El nombre/apellido de la persona.</param>
+        /// <returns>Devuelve el nombre/apellido validado.</returns>
         private string ValidarNombreApellido(string dato)
         {
             bool esValido = true;
@@ -183,7 +245,7 @@ namespace EntidadesAbstractas
 
             foreach (char caracter in dato)
             {
-                if (!char.IsLetter(caracter) && caracter != ' ')
+                if (!char.IsLetter(caracter) || caracter != ' ')
                 {
                     esValido = false;
                     break;
