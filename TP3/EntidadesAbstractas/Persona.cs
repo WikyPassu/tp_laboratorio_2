@@ -97,10 +97,10 @@ namespace EntidadesAbstractas
         /// </summary>
         public Persona()
         {
-            this.dni = 0;
-            this.nombre = "";
-            this.apellido = "";
-            this.nacionalidad = ENacionalidad.Argentino;
+            this.DNI = 1;
+            this.Nombre = "";
+            this.Apellido = "";
+            this.Nacionalidad = ENacionalidad.Argentino;
         }
 
         /// <summary>

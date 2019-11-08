@@ -164,15 +164,18 @@ namespace EntidadesInstanciables
         {
             bool retorno = false;
 
-            foreach (Alumno alumno in g.Alumnos)
+            if (!Object.Equals(g, null) && !Object.Equals(a, null))
             {
-                if (alumno == a)
+                foreach (Alumno alumno in g.Alumnos)
                 {
-                    retorno = true;
-                    break;
+                    if (alumno == a)
+                    {
+                        retorno = true;
+                        break;
+                    }
                 }
             }
-
+            
             return retorno;
         }
 
@@ -197,12 +200,15 @@ namespace EntidadesInstanciables
         {
             bool retorno = false;
 
-            foreach (Profesor profesor in g.Instructores)
+            if (!Object.Equals(g, null) && !Object.Equals(i, null))
             {
-                if (profesor == i)
+                foreach (Profesor profesor in g.Instructores)
                 {
-                    retorno = true;
-                    break;
+                    if (profesor == i)
+                    {
+                        retorno = true;
+                        break;
+                    }
                 }
             }
 
@@ -230,15 +236,18 @@ namespace EntidadesInstanciables
         {
             Profesor instructor = null;
 
-            foreach (Profesor profesor in u.Instructores)
+            if (!Object.Equals(u, null))
             {
-                if (profesor == clase)
+                foreach (Profesor profesor in u.Instructores)
                 {
-                    instructor = profesor;
-                    break;
+                    if (profesor == clase)
+                    {
+                        instructor = profesor;
+                        break;
+                    }
                 }
             }
-
+            
             if (Object.Equals(instructor, null))
             {
                 throw new SinProfesorException();
@@ -257,12 +266,15 @@ namespace EntidadesInstanciables
         {
             Profesor instructor = null;
 
-            foreach (Profesor profesor in u.Instructores)
+            if (!Object.Equals(u, null))
             {
-                if (profesor != clase)
+                foreach (Profesor profesor in u.Instructores)
                 {
-                    instructor = profesor;
-                    break;
+                    if (profesor != clase)
+                    {
+                        instructor = profesor;
+                        break;
+                    }
                 }
             }
             
@@ -277,20 +289,23 @@ namespace EntidadesInstanciables
         /// <returns>Devuelve la universidad pasada como parametro.</returns>
         public static Universidad operator +(Universidad g, EClases clase)
         {
-            Jornada nuevaJornada = new Jornada(clase, g == clase);
-
-            foreach (Alumno alumno in g.Alumnos)
+            if (!Object.Equals(g, null))
             {
-                if (alumno == clase)
+                Jornada nuevaJornada = new Jornada(clase, g == clase);
+
+                foreach (Alumno alumno in g.Alumnos)
                 {
-                    nuevaJornada.Alumnos.Add(alumno);
+                    if (alumno == clase)
+                    {
+                        nuevaJornada.Alumnos.Add(alumno);
+                    }
+                }
+                if (nuevaJornada.Alumnos.Count > 0)
+                {
+                    g.Jornadas.Add(nuevaJornada);
                 }
             }
-            if (nuevaJornada.Alumnos.Count > 0)
-            {
-                g.Jornadas.Add(nuevaJornada);
-            }
-
+            
             return g;
         }
 
@@ -302,14 +317,18 @@ namespace EntidadesInstanciables
         /// <returns>Devuelve la universidad pasada como parametro.</returns>
         public static Universidad operator +(Universidad u, Alumno a)
         {
-            if (u != a)
+            if (!Object.Equals(u, null) && !Object.Equals(a, null))
             {
-                u.Alumnos.Add(a);
+                if (u != a)
+                {
+                    u.Alumnos.Add(a);
+                }
+                else
+                {
+                    throw new AlumnoRepetidoException();
+                }
             }
-            else
-            {
-                throw new AlumnoRepetidoException();
-            }
+            
             return u;
         }
 
@@ -321,10 +340,14 @@ namespace EntidadesInstanciables
         /// <returns>Devuelve la universidad pasada como parametro.</returns>
         public static Universidad operator +(Universidad u, Profesor i)
         {
-            if (u != i)
+            if (!Object.Equals(u, null) && !Object.Equals(i, null))
             {
-                u.Instructores.Add(i);
+                if (u != i)
+                {
+                    u.Instructores.Add(i);
+                }
             }
+            
             return u;
         }
     }

@@ -10,7 +10,7 @@ namespace EntidadesExcepciones
         /// Constructor por defecto de la excepcion nacionalidad invalida.
         /// </summary>
         public NacionalidadInvalidaException()
-            : base()
+            : this("La nacionalidad no se condice con el número de DNI")
         {
         }
 

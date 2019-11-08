@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{6E094CD3-6AB7-4356-9CE7-3FBFF7AA4B7F}</ProjectGuid>
+    <ProjectGuid>{902166C4-35BD-4BFA-BF3B-B1A08924FA80}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>TestUnitario</RootNamespace>
@@ -49,11 +49,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="TestExcepcion1.cs" />
+    <Compile Include="TestUnitario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestExcepcion2.cs" />
-    <Compile Include="TestValorNumerico.cs" />
-    <Compile Include="TestValorNulo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

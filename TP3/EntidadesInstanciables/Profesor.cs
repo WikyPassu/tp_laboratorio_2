@@ -19,16 +19,15 @@ namespace EntidadesInstanciables
         }
 
         /// <summary>
-        /// Constructor por defecto de la clase profesor. Instancia las clases del dia del profesor de manera random.
+        /// Constructor por defecto de la clase profesor..
         /// </summary>
         public Profesor()
+            : this(1, "Sin nombre", "Sin apellido", "1", ENacionalidad.Argentino)
         {
-            this.clasesDelDia = new Queue<Universidad.EClases>();
-            this._randomClases();
         }
 
         /// <summary>
-        /// Sobrecarga del constructor de la clase prodesor. Instancia los datos y clases que da el profesor pasados como parametro.
+        /// Sobrecarga del constructor de la clase profesor. Instancia los datos pasados como parametro y las clases de manera random que da el profesor.
         /// </summary>
         /// <param name="id">ID del profesor.</param>
         /// <param name="nombre">Nombre del profesor.</param>
@@ -97,14 +96,19 @@ namespace EntidadesInstanciables
         public static bool operator ==(Profesor i, Universidad.EClases clase)
         {
             bool retorno = false;
-            foreach (Universidad.EClases unaClase in i.clasesDelDia)
+
+            if (!Object.Equals(i, null))
             {
-                if (unaClase == clase)
+                foreach (Universidad.EClases unaClase in i.clasesDelDia)
                 {
-                    retorno = true;
-                    break;
+                    if (unaClase == clase)
+                    {
+                        retorno = true;
+                        break;
+                    }
                 }
             }
+            
             return retorno;
         }
 

@@ -24,9 +24,8 @@ namespace EntidadesInstanciables
         /// Constructor por defecto de la clase alumno. Instancia los datos por defecto de un alumno.
         /// </summary>
         public Alumno()
+            : this(1, "Sin nombre", "Sin apellido", "1", ENacionalidad.Argentino, Universidad.EClases.Laboratorio, EEstadoCuenta.AlDia)
         {
-            this.claseQueToma = Universidad.EClases.Laboratorio;
-            this.estadoCuenta = EEstadoCuenta.AlDia;
         }
 
         /// <summary>
@@ -42,7 +41,6 @@ namespace EntidadesInstanciables
             : base(id, nombre, apellido, dni, nacionalidad)
         {
             this.claseQueToma = claseQueToma;
-            this.estadoCuenta = EEstadoCuenta.AlDia;
         }
 
         /// <summary>
@@ -113,7 +111,12 @@ namespace EntidadesInstanciables
         /// <returns>Devuelve true si el alumno toma la clase y no es deudor, false caso contrario.</returns>
         public static bool operator ==(Alumno a, Universidad.EClases clase)
         {
-            return a.claseQueToma == clase && a.estadoCuenta != EEstadoCuenta.Deudor; 
+            bool retorno = false;
+            if (!Object.Equals(a, null))
+            {
+                retorno = a.claseQueToma == clase && a.estadoCuenta != EEstadoCuenta.Deudor;
+            }
+            return retorno; 
         }
 
         /// <summary>

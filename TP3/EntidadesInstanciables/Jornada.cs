@@ -121,7 +121,7 @@ namespace EntidadesInstanciables
         /// <returns>Devuelve los datos de la jornada.</returns>
         public static string Leer()
         {
-            string jornadaCargada = null;
+            string jornadaCargada = "";
             Texto datosJornada = new Texto();
 
             datosJornada.Leer(AppDomain.CurrentDomain.BaseDirectory + @"Jornada.txt", out jornadaCargada);
@@ -138,14 +138,19 @@ namespace EntidadesInstanciables
         public static bool operator ==(Jornada j, Alumno a)
         {
             bool retorno = false;
-            foreach (Alumno alumno in j.Alumnos)
+
+            if (!Object.Equals(j, null) && !Object.Equals(a, null))
             {
-                if (alumno == a)
+                foreach (Alumno alumno in j.Alumnos)
                 {
-                    retorno = true;
-                    break;
+                    if (alumno == a)
+                    {
+                        retorno = true;
+                        break;
+                    }
                 }
             }
+            
             return retorno;
         }
 
