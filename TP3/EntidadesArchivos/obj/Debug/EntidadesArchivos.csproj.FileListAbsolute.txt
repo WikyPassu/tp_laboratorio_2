@@ -1,0 +1,9 @@
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesArchivos\bin\Debug\EntidadesArchivos.dll
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesArchivos\bin\Debug\EntidadesArchivos.pdb
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesArchivos\bin\Debug\EntidadesExcepciones.dll
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesArchivos\bin\Debug\EntidadesExcepciones.pdb
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesArchivos\obj\Debug\EntidadesArchivos.csprojAssemblyReference.cache
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesArchivos\obj\Debug\EntidadesArchivos.csproj.CoreCompileInputs.cache
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesArchivos\obj\Debug\EntidadesArchivos.csproj.CopyComplete
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesArchivos\obj\Debug\EntidadesArchivos.dll
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesArchivos\obj\Debug\EntidadesArchivos.pdb

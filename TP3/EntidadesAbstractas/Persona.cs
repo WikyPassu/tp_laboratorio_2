@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using EntidadesExcepciones;
 
 namespace EntidadesAbstractas
@@ -11,7 +13,7 @@ namespace EntidadesAbstractas
         private string apellido;
         private ENacionalidad nacionalidad;
         private int dni;
-        
+
         /// <summary>
         /// Propiedad de lectura y escritura del DNI(entero) de la persona.
         /// </summary>

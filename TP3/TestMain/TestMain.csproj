@@ -51,15 +51,19 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EntidadesAbstractas\EntidadesAbstractas.csproj">
-      <Project>{4001267b-a0d5-43c7-9700-dd5538e9411c}</Project>
+      <Project>{e3294dfb-b095-49dc-b8d8-963a587c75ff}</Project>
       <Name>EntidadesAbstractas</Name>
     </ProjectReference>
+    <ProjectReference Include="..\EntidadesArchivos\EntidadesArchivos.csproj">
+      <Project>{0abd9a89-d4d7-4d3d-98c5-2af8d9c1e2c4}</Project>
+      <Name>EntidadesArchivos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\EntidadesExcepciones\EntidadesExcepciones.csproj">
-      <Project>{6f1a786e-2417-4344-9a62-0119ae96e45d}</Project>
+      <Project>{cf70d17a-c165-4339-b18a-95ad718acb64}</Project>
       <Name>EntidadesExcepciones</Name>
     </ProjectReference>
     <ProjectReference Include="..\EntidadesInstanciables\EntidadesInstanciables.csproj">
-      <Project>{fecd218e-f33a-4707-9896-e7a930005d2a}</Project>
+      <Project>{87d7ebce-da99-40c0-8d15-f102f9e7378d}</Project>
       <Name>EntidadesInstanciables</Name>
     </ProjectReference>
   </ItemGroup>

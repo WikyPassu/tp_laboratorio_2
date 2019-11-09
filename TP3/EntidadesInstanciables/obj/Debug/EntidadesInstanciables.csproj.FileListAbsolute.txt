@@ -1,0 +1,13 @@
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesInstanciables\bin\Debug\EntidadesInstanciables.dll
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesInstanciables\bin\Debug\EntidadesInstanciables.pdb
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesInstanciables\bin\Debug\EntidadesAbstractas.dll
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesInstanciables\bin\Debug\EntidadesArchivos.dll
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesInstanciables\bin\Debug\EntidadesExcepciones.dll
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesInstanciables\bin\Debug\EntidadesAbstractas.pdb
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesInstanciables\bin\Debug\EntidadesArchivos.pdb
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesInstanciables\bin\Debug\EntidadesExcepciones.pdb
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.csprojAssemblyReference.cache
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.csproj.CoreCompileInputs.cache
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.csproj.CopyComplete
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.dll
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\EntidadesInstanciables\obj\Debug\EntidadesInstanciables.pdb

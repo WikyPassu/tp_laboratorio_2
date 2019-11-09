@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using EntidadesAbstractas;
 
 namespace EntidadesInstanciables
@@ -116,7 +118,7 @@ namespace EntidadesInstanciables
             {
                 retorno = a.claseQueToma == clase && a.estadoCuenta != EEstadoCuenta.Deudor;
             }
-            return retorno; 
+            return retorno;
         }
 
         /// <summary>

@@ -3,8 +3,8 @@ NACIONALIDAD: Argentino
 
 LEGAJO NÚMERO: 1
 CLASES DEL DÍA:
-Programacion
 SPD
+Programacion
 
 ALUMNOS:
 NOMBRE COMPLETO: Lopez, Juan

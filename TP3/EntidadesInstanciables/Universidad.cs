@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using EntidadesExcepciones;
 using EntidadesArchivos;
 
@@ -11,7 +13,7 @@ namespace EntidadesInstanciables
         private List<Alumno> alumnos;
         private List<Profesor> profesores;
         private List<Jornada> jornada;
-        
+
         /// <summary>
         /// Propiedad de lectura y escritura de la lista de alumnos de una universidad.
         /// </summary>
@@ -26,7 +28,7 @@ namespace EntidadesInstanciables
                 this.alumnos = new List<Alumno>(value);
             }
         }
-        
+
         /// <summary>
         /// Propiedad de lectura y escritura de la lista de profesores de una universidad.
         /// </summary>
@@ -175,7 +177,7 @@ namespace EntidadesInstanciables
                     }
                 }
             }
-            
+
             return retorno;
         }
 
@@ -247,7 +249,7 @@ namespace EntidadesInstanciables
                     }
                 }
             }
-            
+
             if (Object.Equals(instructor, null))
             {
                 throw new SinProfesorException();
@@ -277,7 +279,7 @@ namespace EntidadesInstanciables
                     }
                 }
             }
-            
+
             return instructor;
         }
 
@@ -305,7 +307,7 @@ namespace EntidadesInstanciables
                     g.Jornadas.Add(nuevaJornada);
                 }
             }
-            
+
             return g;
         }
 
@@ -328,7 +330,7 @@ namespace EntidadesInstanciables
                     throw new AlumnoRepetidoException();
                 }
             }
-            
+
             return u;
         }
 
@@ -347,7 +349,7 @@ namespace EntidadesInstanciables
                     u.Instructores.Add(i);
                 }
             }
-            
+
             return u;
         }
     }

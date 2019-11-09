@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 using EntidadesAbstractas;
 
 namespace EntidadesInstanciables
@@ -46,7 +48,7 @@ namespace EntidadesInstanciables
         /// </summary>
         private void _randomClases()
         {
-            for (int i=0; i<2; i++)
+            for (int i = 0; i < 2; i++)
             {
                 this.clasesDelDia.Enqueue((Universidad.EClases)random.Next(0, 4));
             }
@@ -108,7 +110,7 @@ namespace EntidadesInstanciables
                     }
                 }
             }
-            
+
             return retorno;
         }
 

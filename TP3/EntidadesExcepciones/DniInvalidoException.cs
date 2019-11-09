@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace EntidadesExcepciones
 {
@@ -22,7 +24,7 @@ namespace EntidadesExcepciones
         /// <param name="e">Una excepcion.</param>
         public DniInvalidoException(Exception e)
             : this(DniInvalidoException.mensajeBase + e.Message)
-        {   
+        {
         }
 
         /// <summary>

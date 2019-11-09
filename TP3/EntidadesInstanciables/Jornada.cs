@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
-using System.IO;
+using System.Threading.Tasks;
 using EntidadesArchivos;
 
 namespace EntidadesInstanciables
@@ -62,7 +63,7 @@ namespace EntidadesInstanciables
         /// </summary>
         private Jornada()
         {
-            this.alumnos = new List<Alumno>(); 
+            this.alumnos = new List<Alumno>();
         }
 
         /// <summary>
@@ -76,7 +77,7 @@ namespace EntidadesInstanciables
             this.Clase = clase;
             this.Instructor = instructor;
         }
-        
+
         /// <summary>
         /// Le da formato a los datos de una jornada.
         /// </summary>
@@ -111,7 +112,7 @@ namespace EntidadesInstanciables
             {
                 retorno = true;
             }
-            
+
             return retorno;
         }
 
@@ -150,7 +151,7 @@ namespace EntidadesInstanciables
                     }
                 }
             }
-            
+
             return retorno;
         }
 

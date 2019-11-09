@@ -333,3 +333,19 @@ C:\Users\alan_\Desktop\TP3\TP3-Corrigiendo Jornada.txt\TestMain\obj\Debug\TestMa
 C:\Users\alan_\Desktop\TP3\TP3-Corrigiendo Jornada.txt\TestMain\obj\Debug\TestMain.csproj.CopyComplete
 C:\Users\alan_\Desktop\TP3\TP3-Corrigiendo Jornada.txt\TestMain\obj\Debug\TestMain.exe
 C:\Users\alan_\Desktop\TP3\TP3-Corrigiendo Jornada.txt\TestMain\obj\Debug\TestMain.pdb
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\TestMain\bin\Debug\TestMain.exe.config
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\TestMain\bin\Debug\TestMain.exe
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\TestMain\bin\Debug\TestMain.pdb
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\TestMain\bin\Debug\EntidadesAbstractas.dll
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\TestMain\bin\Debug\EntidadesExcepciones.dll
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\TestMain\bin\Debug\EntidadesInstanciables.dll
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\TestMain\bin\Debug\EntidadesArchivos.dll
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\TestMain\bin\Debug\EntidadesAbstractas.pdb
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\TestMain\bin\Debug\EntidadesExcepciones.pdb
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\TestMain\bin\Debug\EntidadesInstanciables.pdb
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\TestMain\bin\Debug\EntidadesArchivos.pdb
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\TestMain\obj\Debug\TestMain.csprojAssemblyReference.cache
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\TestMain\obj\Debug\TestMain.csproj.CoreCompileInputs.cache
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\TestMain\obj\Debug\TestMain.csproj.CopyComplete
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\TestMain\obj\Debug\TestMain.exe
+C:\Users\alan_\Desktop\tp_laboratorio_2\TP3 - Copy\TestMain\obj\Debug\TestMain.pdb
