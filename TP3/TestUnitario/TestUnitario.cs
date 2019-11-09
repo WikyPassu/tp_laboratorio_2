@@ -8,6 +8,9 @@ namespace TestUnitario
     [TestClass]
     public class TestUnitario
     {
+        /// <summary>
+        /// Valida si se tiro una excepcion del tipo AlumnoRepetidoException.
+        /// </summary>
         [TestMethod]
         public void AlumnoRepetido()
         {
@@ -29,6 +32,9 @@ namespace TestUnitario
             }
         }
 
+        /// <summary>
+        /// Valida si se tiro una excepcion del tipo NacionalidadInvalidaException.
+        /// </summary>
         [TestMethod]
         public void ValidaNacionalidad()
         {
@@ -43,6 +49,9 @@ namespace TestUnitario
             }
         }
 
+        /// <summary>
+        /// Valida que se haya pasado cierto valor numerico como DNI a un alumno.
+        /// </summary>
         [TestMethod]
         public void ValidaDni()
         {
@@ -50,6 +59,9 @@ namespace TestUnitario
             Assert.AreEqual(alumno.DNI, 90123456);
         }
 
+        /// <summary>
+        /// Valida que la lista de alumnos de una universidad no sea null.
+        /// </summary>
         [TestMethod]
         public void ListaAlumnosCorrecta()
         {
