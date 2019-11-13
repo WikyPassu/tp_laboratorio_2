@@ -29,12 +29,12 @@ namespace Entidades
             this.mockPaquetes = new List<Thread>();
             this.paquetes = new List<Paquete>();
         }
-        //Revisar, rompe fija y no se por que.
+        //Revisar.
         public string MostrarDatos(IMostrar<List<Paquete>> elementos)
         {
             string datos = "";
-            
-            foreach (Paquete p in (List<Paquete>)elementos)
+
+            foreach (Paquete p in ((Correo)elementos).Paquetes)
             {
                 datos += string.Format("{0} para {1} ({2})\n", p.TrackingID, p.DireccionEntrega, p.Estado.ToString());
             }
@@ -55,7 +55,7 @@ namespace Entidades
                 }
             }
         }
-        // Revisar, tira error raro al querer pasar un paquete mientras otro esta en marcha.
+
         public static Correo operator +(Correo c, Paquete p)
         {
             bool noExiste = false;

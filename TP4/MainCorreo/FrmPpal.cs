@@ -67,7 +67,7 @@ namespace MainCorreo
             try
             {
                 Paquete nuevoPaquete = new Paquete(this.txtDireccion.Text, this.mtxtTrackingID.Text);
-                nuevoPaquete.InformaEstado += paq_InformaEstado;
+                nuevoPaquete.InformaEstado += new Paquete.DelegadoEstado(paq_InformaEstado); //Revisar.
                 this.correo += nuevoPaquete;
                 this.ActualizarEstados();
             }
@@ -76,7 +76,7 @@ namespace MainCorreo
                 MessageBox.Show(error.Message, "Paquete repetido", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
         }
-        //Revisar, rompe y no se por que, debe ser algo respecto a la implementacion de interfaz.
+        //Revisar.
         private void btnMostrarTodos_Click(object sender, EventArgs e)
         {
             this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);
