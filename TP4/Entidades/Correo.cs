@@ -58,8 +58,6 @@ namespace Entidades
 
         public static Correo operator +(Correo c, Paquete p)
         {
-            bool existe = false;
-
             if (!Object.Equals(c, null) && !Object.Equals(p, null))
             {
                 Thread hilo = new Thread(p.MockCicloVida);
@@ -68,17 +66,13 @@ namespace Entidades
                 {
                     if (paquete == p)
                     {
-                        existe = true;
                         throw new TrackingIdRepetidoException("El Tracking ID " + p.TrackingID + " ya figura en la lista de envios.");
                     }
                 }
 
-                if (!existe)
-                {
-                    c.Paquetes.Add(p);
-                    c.mockPaquetes.Add(hilo);
-                    hilo.Start();
-                }
+                c.Paquetes.Add(p);
+                c.mockPaquetes.Add(hilo);
+                hilo.Start();
             }
 
             return c;
