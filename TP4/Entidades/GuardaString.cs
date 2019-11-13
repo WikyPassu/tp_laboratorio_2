@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.Windows.Forms;
 
 namespace Entidades
 {
@@ -23,7 +24,7 @@ namespace Entidades
             }
             catch(Exception error)
             {
-                throw new Exception(error.Message);
+                MessageBox.Show(error.Message, "Error al guardar archivo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return retorno;

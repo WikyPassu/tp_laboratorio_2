@@ -29,14 +29,14 @@ namespace Entidades
             this.mockPaquetes = new List<Thread>();
             this.paquetes = new List<Paquete>();
         }
-
+        //Revisar, rompe fija y no se por que.
         public string MostrarDatos(IMostrar<List<Paquete>> elementos)
         {
             string datos = "";
-
-            foreach (Paquete paquete in this.Paquetes)
+            
+            foreach (Paquete p in (List<Paquete>)elementos)
             {
-                datos += string.Format("{0} para {1} ({2})\n", paquete.TrackingID, paquete.DireccionEntrega, paquete.Estado.ToString());
+                datos += string.Format("{0} para {1} ({2})\n", p.TrackingID, p.DireccionEntrega, p.Estado.ToString());
             }
 
             return datos;
@@ -55,23 +55,33 @@ namespace Entidades
                 }
             }
         }
-
+        // Revisar, tira error raro al querer pasar un paquete mientras otro esta en marcha.
         public static Correo operator +(Correo c, Paquete p)
         {
             if (!Object.Equals(c, null) && !Object.Equals(p, null))
             {
-                foreach (Paquete paquete in c.Paquetes)
+                if (c.Paquetes.Count == 0)
                 {
-                    if (paquete != p)
+                    c.Paquetes.Add(p);
+                    Thread hilo = new Thread(p.MockCicloVida);
+                    c.mockPaquetes.Add(hilo);
+                    hilo.Start();
+                }
+                else
+                {
+                    foreach (Paquete paquete in c.Paquetes)
                     {
-                        c.Paquetes.Add(p);
-                        Thread hilo = new Thread(p.MockCicloVida);
-                        c.mockPaquetes.Add(hilo);
-                        hilo.Start();
-                    }
-                    else
-                    {
-                        throw new TrackingIdRepetidoException("Paquete repetido.");
+                        if (paquete != p)
+                        {
+                            c.Paquetes.Add(p);
+                            Thread hilo = new Thread(p.MockCicloVida);
+                            c.mockPaquetes.Add(hilo);
+                            hilo.Start();
+                        }
+                        else
+                        {
+                            throw new TrackingIdRepetidoException("El Tracking ID " + p.TrackingID + " ya figura en la lista de envios.");
+                        }
                     }
                 }
             }

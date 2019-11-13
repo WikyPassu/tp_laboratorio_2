@@ -29,7 +29,7 @@ namespace Entidades
             try
             {
                 PaqueteDAO.conexion.Open();
-                PaqueteDAO.comando.CommandText = "INSERT INTO [correo-sp-2017].dbo.Paquetes(direccionEntrega, trackingID, alumno) values('" + p.DireccionEntrega + "', '" + p.TrackingID + "', 'Passucci Alan')";
+                PaqueteDAO.comando.CommandText = "INSERT INTO [correo-sp-2017].dbo.Paquetes(direccionEntrega, trackingID, alumno) VALUES('" + p.DireccionEntrega + "', '" + p.TrackingID + "', 'Passucci Alan')";
                 PaqueteDAO.comando.ExecuteNonQuery();
                 retorno = true;
             }

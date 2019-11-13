@@ -23,6 +23,18 @@ namespace Entidades
             Entregado
         }
 
+        public string TrackingID
+        {
+            get
+            {
+                return this.trackingID;
+            }
+            set
+            {
+                this.trackingID = value;
+            }
+        }
+
         public string DireccionEntrega
         {
             get
@@ -47,28 +59,16 @@ namespace Entidades
             }
         }
 
-        public string TrackingID
-        {
-            get
-            {
-                return this.trackingID;
-            }
-            set
-            {
-                this.trackingID = value;
-            }
-        }
-
         public Paquete(string direccionEntrega, string trackingID)
         {
+            this.TrackingID = trackingID;
             this.DireccionEntrega = direccionEntrega;
             this.Estado = EEstado.Ingresado;
-            this.TrackingID = trackingID;
         }
 
         public string MostrarDatos(IMostrar<Paquete> elemento)
         {
-            return string.Format("{0} para {1}", this.TrackingID, this.DireccionEntrega);
+            return string.Format("{0} para {1}", ((Paquete)elemento).TrackingID, ((Paquete)elemento).DireccionEntrega);
         }
 
         public override string ToString()
