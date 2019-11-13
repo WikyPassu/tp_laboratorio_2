@@ -79,7 +79,8 @@ namespace MainCorreo
         //Revisar, rompe y no se por que, debe ser algo respecto a la implementacion de interfaz.
         private void btnMostrarTodos_Click(object sender, EventArgs e)
         {
-            this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);        }
+            this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);
+        }
 
         private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
