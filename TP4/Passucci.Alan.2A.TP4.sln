@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades", "Entidades\Enti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainCorreo", "MainCorreo\MainCorreo.csproj", "{5C506F51-7990-4CB8-A119-9F2C0614C1A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestUnitario", "TestUnitario\TestUnitario.csproj", "{333DFC59-8494-4346-AC97-87E7D30BA553}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{5C506F51-7990-4CB8-A119-9F2C0614C1A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5C506F51-7990-4CB8-A119-9F2C0614C1A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5C506F51-7990-4CB8-A119-9F2C0614C1A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{333DFC59-8494-4346-AC97-87E7D30BA553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{333DFC59-8494-4346-AC97-87E7D30BA553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{333DFC59-8494-4346-AC97-87E7D30BA553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{333DFC59-8494-4346-AC97-87E7D30BA553}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

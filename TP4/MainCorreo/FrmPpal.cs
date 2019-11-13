@@ -24,7 +24,7 @@ namespace MainCorreo
             this.MinimizeBox = false;
             this.StartPosition = FormStartPosition.CenterScreen;
             this.rtbMostrar.Enabled = false;
-            this.FormClosing += FrmPpal_FormClosing;
+            this.FormClosing += new FormClosingEventHandler(FrmPpal_FormClosing);
         }
         
         private void ActualizarEstados()
