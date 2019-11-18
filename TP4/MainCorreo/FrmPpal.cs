@@ -86,7 +86,7 @@ namespace MainCorreo
                 this.correo += nuevoPaquete;
                 this.ActualizarEstados();
             }
-            catch (Exception error)
+            catch (TrackingIdRepetidoException error)
             {
                 MessageBox.Show(error.Message, "Paquete repetido", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
