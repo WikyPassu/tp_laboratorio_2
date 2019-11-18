@@ -82,7 +82,7 @@ namespace MainCorreo
             try
             {
                 Paquete nuevoPaquete = new Paquete(this.txtDireccion.Text, this.mtxtTrackingID.Text);
-                nuevoPaquete.InformaEstado += new Paquete.DelegadoEstado(paq_InformaEstado); //Revisar.
+                nuevoPaquete.InformaEstado += new Paquete.DelegadoEstado(paq_InformaEstado);
                 this.correo += nuevoPaquete;
                 this.ActualizarEstados();
             }

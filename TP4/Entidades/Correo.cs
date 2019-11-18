@@ -43,19 +43,19 @@ namespace Entidades
         /// <returns>Retorna una cadena con formato de los datos de cada paquete en la lista.</returns>
         public string MostrarDatos(IMostrar<List<Paquete>> elementos)
         {
-            string datos = "";
+            StringBuilder datos = new StringBuilder();
 
-            if (!Object.Equals(elementos, null) && elementos is List<Paquete>)
+            if (!Object.Equals(elementos, null) && elementos is Correo)
             {
-                List<Paquete> listaPaquetes = (List<Paquete>)elementos;
+                List<Paquete> listaPaquetes = ((Correo)elementos).Paquetes;
 
                 foreach (Paquete p in listaPaquetes)
                 {
-                    datos += string.Format("{0} para {1} ({2})\n", p.TrackingID, p.DireccionEntrega, p.Estado.ToString());
+                    datos.AppendLine(string.Format("{0} para {1} ({2})", p.TrackingID, p.DireccionEntrega, p.Estado.ToString()));
                 }
             }
             
-            return datos;
+            return datos.ToString();
         }
 
         /// <summary>
