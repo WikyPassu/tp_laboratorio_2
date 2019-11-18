@@ -113,7 +113,7 @@ namespace MainCorreo
         }
 
         /// <summary>
-        /// Muestra los datos de un objeto en el RichTextBox.
+        /// Muestra los datos de un objeto en el RichTextBox y lo guarda en salida.txt
         /// </summary>
         /// <typeparam name="T">Cualquier tipo de objeto.</typeparam>
         /// <param name="elemento">Un objeto del tipo T.</param>
