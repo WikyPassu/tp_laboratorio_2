@@ -12,10 +12,13 @@ namespace Entidades
         private string direccionEntrega;
         private EEstado estado;
         private string trackingID;
-
+        
         public delegate void DelegadoEstado(object emisor, EventArgs evento);
         public event DelegadoEstado InformaEstado;
 
+        /// <summary>
+        /// Enumerado del estado del paquete.
+        /// </summary>
         public enum EEstado
         {
             Ingresado,
@@ -23,6 +26,9 @@ namespace Entidades
             Entregado
         }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura del Tracking ID del paquete.
+        /// </summary>
         public string TrackingID
         {
             get
@@ -35,6 +41,9 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura de la direccion de entrega del paquete.
+        /// </summary>
         public string DireccionEntrega
         {
             get
@@ -47,6 +56,9 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Propiedad de lectura y escritura del estado actual del paquete.
+        /// </summary>
         public EEstado Estado
         {
             get
@@ -59,6 +71,11 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Constructor de la clase paquete que instancia sus datos pasados como parametro.
+        /// </summary>
+        /// <param name="direccionEntrega">Direccion de entrega del paquete.</param>
+        /// <param name="trackingID">Tracking ID del paquete.</param>
         public Paquete(string direccionEntrega, string trackingID)
         {
             this.TrackingID = trackingID;
@@ -66,16 +83,36 @@ namespace Entidades
             this.Estado = EEstado.Ingresado;
         }
 
+        /// <summary>
+        /// Compila la informacion de un paquete.
+        /// </summary>
+        /// <param name="elemento">Un paquete.</param>
+        /// <returns>Retorna una cadena con formato de los datos del paquete especificado.</returns>
         public string MostrarDatos(IMostrar<Paquete> elemento)
         {
-            return string.Format("{0} para {1}", ((Paquete)elemento).TrackingID, ((Paquete)elemento).DireccionEntrega);
+            string datos = "";
+
+            if (!Object.Equals(elemento, null) && elemento is Paquete)
+            {
+                Paquete paquete = (Paquete)elemento;
+                datos = string.Format("{0} para {1}", paquete.TrackingID, paquete.DireccionEntrega);
+            }
+
+            return datos;
         }
 
+        /// <summary>
+        /// Retorna la informacion de un paquete.
+        /// </summary>
+        /// <returns>Retorna una cadena con la informacion del paquete.</returns>
         public override string ToString()
         {
             return this.MostrarDatos(this);
         }
 
+        /// <summary>
+        /// Hace que un paquete cambie de estado y luego intenta guardarlo en la base de datos.
+        /// </summary>
         public void MockCicloVida()
         {
             while (this.Estado != EEstado.Entregado)
@@ -87,6 +124,12 @@ namespace Entidades
             PaqueteDAO.Insertar(this);
         }
 
+        /// <summary>
+        /// Verifica si dos paquetes son iguales de acuerdo a su Tracking ID.
+        /// </summary>
+        /// <param name="p1">Un paquete.</param>
+        /// <param name="p2">Otro paquete.</param>
+        /// <returns>Retorna true si los paquetes son iguales, false caso contrario.</returns>
         public static bool operator ==(Paquete p1, Paquete p2)
         {
             bool retorno = false;
@@ -102,6 +145,12 @@ namespace Entidades
             return retorno;
         }
 
+        /// <summary>
+        /// Verifica si dos paquetes son diferentes de a cuerdo a su Tracking ID.
+        /// </summary>
+        /// <param name="p1">Un paquete.</param>
+        /// <param name="p2">Otro paquete.</param>
+        /// <returns>Retorna true si los paquetes son diferentes, false caso contrario.</returns>
         public static bool operator !=(Paquete p1, Paquete p2)
         {
             return !(p1 == p2);

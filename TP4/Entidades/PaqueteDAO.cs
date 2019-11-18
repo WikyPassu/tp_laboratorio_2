@@ -14,6 +14,9 @@ namespace Entidades
         private static SqlConnection conexion;
         private static SqlCommand comando;
 
+        /// <summary>
+        /// Constructor estatico de la clase PaqueteDAO que instancia la conexion, el comando y sus caracteristicas.
+        /// </summary>
         static PaqueteDAO()
         {
             PaqueteDAO.conexion = new SqlConnection(Properties.Settings.Default.Conexion);
@@ -22,6 +25,11 @@ namespace Entidades
             PaqueteDAO.comando.CommandType = CommandType.Text;
         }
 
+        /// <summary>
+        /// Guarda los datos de un paquete en la base de datos [correo-sp-2017].dbo.Paquetes
+        /// </summary>
+        /// <param name="p">Paquete a guardar.</param>
+        /// <returns>Retorna true si se pudo establecer conexion y se pudieron guardar los datos del paquete, false caso contrario.</returns>
         public static bool Insertar(Paquete p)
         {
             bool retorno = false;

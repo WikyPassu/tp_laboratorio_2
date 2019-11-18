@@ -12,6 +12,9 @@ namespace Entidades
         private List<Thread> mockPaquetes;
         private List<Paquete> paquetes;
 
+        /// <summary>
+        /// Propiedad de lectura y escritura de la lista de paquetes del correo.
+        /// </summary>
         public List<Paquete> Paquetes
         {
             get
@@ -24,24 +27,40 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Constructor de la clase correo que instancia las listas que tiene como atributos.
+        /// </summary>
         public Correo()
         {
             this.mockPaquetes = new List<Thread>();
             this.paquetes = new List<Paquete>();
         }
-        //Revisar.
+        
+        /// <summary>
+        /// Compila la informacion de todos los paquetes de un correo.
+        /// </summary>
+        /// <param name="elementos">Lista de paquetes.</param>
+        /// <returns>Retorna una cadena con formato de los datos de cada paquete en la lista.</returns>
         public string MostrarDatos(IMostrar<List<Paquete>> elementos)
         {
             string datos = "";
 
-            foreach (Paquete p in ((Correo)elementos).Paquetes)
+            if (!Object.Equals(elementos, null) && elementos is List<Paquete>)
             {
-                datos += string.Format("{0} para {1} ({2})\n", p.TrackingID, p.DireccionEntrega, p.Estado.ToString());
-            }
+                List<Paquete> listaPaquetes = (List<Paquete>)elementos;
 
+                foreach (Paquete p in listaPaquetes)
+                {
+                    datos += string.Format("{0} para {1} ({2})\n", p.TrackingID, p.DireccionEntrega, p.Estado.ToString());
+                }
+            }
+            
             return datos;
         }
 
+        /// <summary>
+        /// Cierra todos los hilos activos.
+        /// </summary>
         public void FinEntrega()
         {
             foreach (Thread hilo in this.mockPaquetes)
@@ -56,6 +75,12 @@ namespace Entidades
             }
         }
 
+        /// <summary>
+        /// Agrega un paquete a la lista de paquetes del correo previa verificacion.
+        /// </summary>
+        /// <param name="c"></param>
+        /// <param name="p"></param>
+        /// <returns></returns>
         public static Correo operator +(Correo c, Paquete p)
         {
             if (!Object.Equals(c, null) && !Object.Equals(p, null))

@@ -15,6 +15,9 @@ namespace MainCorreo
     {
         private Correo correo;
 
+        /// <summary>
+        /// Constructor del formulario principal de la aplicacion.
+        /// </summary>
         public FrmPpal()
         {
             InitializeComponent();
@@ -27,6 +30,9 @@ namespace MainCorreo
             this.FormClosing += new FormClosingEventHandler(FrmPpal_FormClosing);
         }
         
+        /// <summary>
+        /// Actualiza las listas de paquetes segun su estado.
+        /// </summary>
         private void ActualizarEstados()
         {
             this.lstEstadoIngresado.Items.Clear();
@@ -48,7 +54,11 @@ namespace MainCorreo
                 }
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="sender">Emisor.</param>
+        /// <param name="e">Evento.</param>
         private void paq_InformaEstado(object sender, EventArgs e)
         {
             if (this.InvokeRequired)
@@ -62,6 +72,11 @@ namespace MainCorreo
             }
         }
 
+        /// <summary>
+        /// Agrega un nuevo paquete al sistema.
+        /// </summary>
+        /// <param name="sender">Emisor.</param>
+        /// <param name="e">Evento.</param>
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
@@ -76,26 +91,46 @@ namespace MainCorreo
                 MessageBox.Show(error.Message, "Paquete repetido", MessageBoxButtons.OK, MessageBoxIcon.Question);
             }
         }
-        //Revisar.
+        
+        /// <summary>
+        /// Muestra la informacion de todos los paquetes.
+        /// </summary>
+        /// <param name="sender">Emisor.</param>
+        /// <param name="e">Evento.</param>
         private void btnMostrarTodos_Click(object sender, EventArgs e)
         {
             this.MostrarInformacion<List<Paquete>>((IMostrar<List<Paquete>>)correo);
         }
 
+        /// <summary>
+        /// Muestra la informacion del paquete seleccionado en la lista de paquetes entregados.
+        /// </summary>
+        /// <param name="sender">Emisor.</param>
+        /// <param name="e">Evento.</param>
         private void mostrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.MostrarInformacion<Paquete>((IMostrar<Paquete>)lstEstadoEntregado.SelectedItem);
         }
 
+        /// <summary>
+        /// Muestra los datos de un objeto en el RichTextBox.
+        /// </summary>
+        /// <typeparam name="T">Cualquier tipo de objeto.</typeparam>
+        /// <param name="elemento">Un objeto del tipo T.</param>
         private void MostrarInformacion<T>(IMostrar<T> elemento)
         {
             if (!Object.Equals(elemento, null))
             {
                 this.rtbMostrar.Text = elemento.MostrarDatos(elemento);
-                GuardaString.Guardar(this.rtbMostrar.Text, "salida.txt");
+                this.rtbMostrar.Text.Guardar("salida.txt");
             }
         }
 
+        /// <summary>
+        /// Al cerrarse la ventana, llamara al metodo que cierra todos los hilos activos.
+        /// </summary>
+        /// <param name="sender">Emisor.</param>
+        /// <param name="e">Evento.</param>
         private void FrmPpal_FormClosing(object sender, FormClosingEventArgs e)
         {
             this.correo.FinEntrega();
